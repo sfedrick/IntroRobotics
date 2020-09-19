@@ -21,16 +21,13 @@ DH_params = [0, -pi/2, L1, theta1;
             0, pi/2, 0, theta4 - pi/2;
             0, 0, L4+L5, theta5 + pi];
         
-%Initialize DH variables
-theta = 0; alpha = 0; a = 0; d = 0;
-A = zeros(4);
        
 %Initialize T matrices, combined them into a single matrix to make easier
 %to calculate
 T = eye(4);
 
 %Calculate each intermediate homogeneous transformation matrix
-for link = 1:size(DH_params, 1)
+for link = 1:5
     a = DH_params(link,1);
     alpha = DH_params(link,2);
     d = DH_params(link,3);
