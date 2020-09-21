@@ -1,7 +1,7 @@
 function [rMin, rMax] = findR (angleStep, paramStep)
  anglephi=0:(2*pi)/angleStep:2*pi;
  angletheta=0:(2*pi)/angleStep:2*pi;
-  rMin = zeros(length(anglephi));
+  rMin = ones(length(anglephi))*inf;
   rMax = zeros(length(anglephi));
   
    jlim1=[0,2*pi];
@@ -36,18 +36,74 @@ function [rMin, rMax] = findR (angleStep, paramStep)
                         % at (phi, theta) =< r
                         [rminny,minnycol,minnyrow]=searchR(rMin,theta,phi,angleStep);
                         if(r<rminny)
-                            rMin(minnycol,minnyrow)=r;
+                            rMin(minnyrow,minnycol)=r;
+                            
+                            if((minnycol-1)>0)
+                                rMin(minnyrow,minnycol-1)=r;
+                            end
+                            if((minnyrow-1)>0)
+                                rMin(minnyrow-1,minnycol)=r;
+                            end
+                            if((minnycol+1)<length(anglephi))
+                                rMin(minnyrow,minnycol+1)=r;
+                            end
+                            if((minnyrow+1)<length(anglephi))
+                                rMin(minnyrow+1,minnycol)=r;
+                            end
+                            if((minnyrow-1)>0 && (minnycol-1)>0)
+                                rMin(minnyrow-1,minnycol-1)=r;
+                            end
+                            if( (minnyrow+1)<length(anglephi)&& (minnycol+1)<length(anglephi))
+                                rMin(minnyrow+1,minnycol+1)=r;
+                            end
+                            if((minnyrow+1)<length(anglephi) && (minnycol-1)>0)
+                                rMin(minnyrow+1,minnycol-1)=r;
+                            end
+                            
+                             if((minnyrow-1)>0 && (minnycol+1)<length(anglephi))
+                                rMin(minnyrow-1,minnycol+1)=r;
+                            end
+                            
                         end
 
                         % search through rMax for phi and theta of coord and check if rMax
                         % at (phi, theta) >= r
                         [rmaxxy,maxxycol,maxxyrow]=searchR(rMax,theta,phi,angleStep);
                         if(r>=rmaxxy)
-                            rMax(maxxycol,maxxyrow)=r;
+                            rMax(maxxyrow,maxxycol)=r;
+                            
+                            
+                            if((maxxycol-1)>0)
+                                rMax(maxxyrow,maxxycol-1)=r;
+                            end
+                            if((maxxyrow-1)>0)
+                                rMax(maxxyrow-1,maxxycol)=r;
+                            end
+                            if((maxxycol+1)<length(anglephi))
+                                rMax(maxxyrow,maxxycol+1)=r;
+                            end
+                            if((maxxyrow+1)<length(anglephi))
+                                rMax(maxxyrow+1,maxxycol)=r;
+                            end
+                            if((maxxyrow-1)>0 && (maxxycol-1)>0)
+                                rMax(maxxyrow-1,maxxycol-1)=r;
+                            end
+                            if( (maxxyrow+1)<length(anglephi)&& (maxxycol+1)<length(anglephi))
+                                rMax(maxxyrow+1,maxxycol+1)=r;
+                            end
+                            if((maxxyrow+1)<length(anglephi) && (maxxycol-1)>0)
+                                rMax(maxxyrow+1,maxxycol-1)=r;
+                            end
+                            
+                             if((maxxyrow-1)>0 && (maxxycol+1)<length(anglephi))
+                                rMax(maxxyrow-1,maxxycol+1)=r;
+                            end
+                            
+                            
                         end
-
-
-
+                        
+                        
+                         
                     end
                 end
             end

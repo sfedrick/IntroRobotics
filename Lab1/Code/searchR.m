@@ -2,16 +2,20 @@ function [rval,thetaIndex, phiIndex]=searchR(rmatrix,theta,phi,anglestep)
 
 anglephi=0:(2*pi)/anglestep:2*pi;
 angletheta=0:(2*pi)/anglestep:2*pi;
-
+binsize=(2*pi)/anglestep;
 if (phi < 0)
-   phi = 360 + phi;
+   phi = 2*pi + phi;
+elseif(phi>2*pi)
+   phi=mod(phi,(2*pi));
 end
 if (theta < 0)
-   theta = 360 + theta;
+   theta = 2*pi + theta;
+elseif(phi>2*pi)
+   theta=mod(theta,(2*pi));
 end
 
-phiIndex = floor(phi/anglestep);
-thetaIndex = floor(theta/anglestep);
+phiIndex = floor(phi/binsize);
+thetaIndex = floor(theta/binsize);
 
 if (phiIndex == 0)
     phiIndex = 1;

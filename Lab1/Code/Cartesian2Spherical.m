@@ -1,5 +1,6 @@
 function [r, theta, phi] = Cartesian2Spherical(x, y, z)
     r = sqrt(x^2 + y^2 + z^2);
+    
     if (x == 0)
        theta = 0;
     else
@@ -10,5 +11,4 @@ function [r, theta, phi] = Cartesian2Spherical(x, y, z)
     else
         phi = atan(sqrt(x^2 + y^2)/z);
     end
-    
 end
