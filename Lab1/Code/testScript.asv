@@ -1,0 +1,5 @@
+[rmin,rmax]=findR(10,20);
+
+
+
+

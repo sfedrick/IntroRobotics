@@ -1,0 +1,19 @@
+function [x,y,z] = Sphericalplot(R,anglestep)
+% example of what x and y should look like
+%x = -2:.2:2; 
+% y = -2:.2:2;
+% 
+% [xx,yy] = meshgrid(x,y);
+% zz = xx.*exp(-xx.^2-yy.^2);
+ anglephi=0:(2*pi)/angleStep:2*pi;
+ angletheta=0:(2*pi)/angleStep:2*pi;
+ shape=size(x);
+row= shape(1);
+col=shape(2);
+for i=1:row
+    for i=1:col
+        
+    end
+end 
+
+end 
