@@ -62,4 +62,4 @@ hold on
 k = boundary(x,y,z,1);
 axis equal
 trisurf(k,x,y,z,'FaceColor','red','FaceAlpha',0.1);
-title('Computed Workspace');
+title('Computed Workspace for Lynx Robot Arm');

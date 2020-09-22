@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.4)  18 SEP 2020 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.4)  21 SEP 2020 21:58
 entering extended mode
 **./Lab1.tex
 (Lab1.tex
@@ -206,35 +206,43 @@ G,.JBIG2,.JB2,.eps]
 <Q1.png, id=7, 418.56375pt x 243.40938pt>
 File: Q1.png Graphic file (type png)
 <use Q1.png>
-Package pdftex.def Info: Q1.png  used on input line 27.
+Package pdftex.def Info: Q1.png  used on input line 28.
 (pdftex.def)             Requested size: 418.56271pt x 243.40877pt.
 
-Overfull \hbox (28.56271pt too wide) in paragraph at lines 27--28
+Overfull \hbox (28.56271pt too wide) in paragraph at lines 28--29
  [][] 
  []
 
-[1 <./Q1.png>] [2] (Lab1.aux) ) 
+[1 <./Q1.png>] [2]
+<ComputedWorkspace.png, id=21, 411.78844pt x 418.56375pt>
+File: ComputedWorkspace.png Graphic file (type png)
+<use ComputedWorkspace.png>
+Package pdftex.def Info: ComputedWorkspace.png  used on input line 125.
+(pdftex.def)             Requested size: 205.8937pt x 209.28136pt.
+ [3 <./ComputedWorkspace.png>] (Lab1.aux) ) 
 Here is how much of TeX's memory you used:
- 2260 strings out of 480790
- 33370 string characters out of 2894923
- 275779 words of memory out of 3000000
- 18259 multiletter control sequences out of 15000+200000
- 537558 words of font info for 42 fonts, out of 3000000 for 9000
+ 2268 strings out of 480790
+ 33586 string characters out of 2894923
+ 279779 words of memory out of 3000000
+ 18266 multiletter control sequences out of 15000+200000
+ 538164 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,8n,29p,203b,291s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Wesley Yee/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Wesley Yee/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Wesley Ye
-e/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/U
-sers/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wesley Yee/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Lab1.pdf (3 pages, 154538 bytes).
+ 34i,8n,29p,203b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Wesley Yee/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Wesley Yee/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Use
+rs/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Wesley Yee/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Wesley Yee
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
+ers/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y8.pfb>
+Output written on Lab1.pdf (4 pages, 350294 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
