@@ -1,8 +1,6 @@
 %Problem 4
 %function T = problem4(q)
 
-discStep = 9;
-
 %Link Lengths
 L1 = 76.2;
 L2 = 146.05;
@@ -17,11 +15,11 @@ x = [];
 y = [];
 z = [];
 
-for joint1 = -1.4:2.8/discStep:1.4
-    for joint2 = -1.2:2.6/discStep:1.4
-        for joint3 = -1.4:3.1/discStep:1.7
-            for joint4 = -1.9:3.6/discStep:1.7
-                for joint5 = -2:3.5/discStep:1.5
+for joint1 = -1.4:0.4:1.4
+    for joint2 = -1.2:0.4:1.4
+        for joint3 = -1.4:0.4:1.7
+            for joint4 = -1.9:0.4:1.7
+                for joint5 = -2:0.4:1.5
                     T = eye(4);
                     DH_params = [0, -pi/2, L1, joint1; 
                                 L2, 0, 0, joint2 + pi/2;
@@ -48,14 +46,13 @@ for joint1 = -1.4:2.8/discStep:1.4
         end
     end
 end
-plot3(x,y,z,'.','MarkerSize',1);
+plot3(x,y,z,'.');
 xlabel('X');
 ylabel('Y');
-zlabel('Z');
+label('Z');
 hold on
-k = boundary(x,y,z,1);
+k = boundary(x,y,z,0.3);
 axis equal
-trisurf(k,x,y,z,'FaceColor','red','FaceAlpha',0.1);
-title('Computed Workspace');
+trisurf(k,
 %end
 
