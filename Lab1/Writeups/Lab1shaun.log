@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.9.19)  23 SEP 2020 16:29
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.9.19)  23 SEP 2020 19:41
  restricted system commands enabled.
-**Lab1.tex
-(./Lab1.tex
+**Lab1shaun.tex
+(./Lab1shaun.tex
 LaTeX2e <2020-02-02> patch level 5
 Lua module: luaotfload-main 2020-05-06 3.14 luaotfload entry point
 Lua module: luaotfload-init 2020-05-06 3.14 luaotfload submodule / initializatio
@@ -232,10 +232,9 @@ mode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count194
 \l__pdf_internal_box=\box49
-)
-No file Lab1.aux.
+) (./Lab1shaun.aux)
+\openout1 = Lab1shaun.aux
 
-\openout1 = Lab1.aux
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
@@ -246,6 +245,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6.
+
 
 (C:/Users/shaun/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -298,49 +298,122 @@ Overfull \hbox (28.56271pt too wide) in paragraph at lines 31--32
  []
 
 [1<./Q1.png>] [2]
-<ComputedWorkspace.png, id=22, 549.55313pt x 426.84468pt>
+<firstweird config.png, id=24, 513.41812pt x 492.33937pt>
+File: firstweird config.png Graphic file (type png)
+<use firstweird config.png>
+Package luatex.def Info: firstweird config.png  used on input line 110.
+(luatex.def)             Requested size: 513.41685pt x 492.33815pt.
+
+Overfull \hbox (141.41685pt too wide) in paragraph at lines 110--111
+[][] 
+ []
+
+[3]
+<entering the joint limits of every joint.png, id=28, 519.44063pt x 593.21625pt>
+
+File: entering the joint limits of every joint.png Graphic file (type png)
+<use entering the joint limits of every joint.png>
+Package luatex.def Info: entering the joint limits of every joint.png  used on i
+nput line 114.
+(luatex.def)             Requested size: 519.43936pt x 593.2148pt.
+
+Overfull \hbox (263.43018pt too wide) in paragraph at lines 112--115
+\TU/lmr/m/n/12 q=[0,0,1.5882,1.700,0,0].  [] 
+ []
+
+[4<./firstweird config.png>]
+Overfull \vbox (44.7148pt too high) has occurred while \output is active []
+
+
+[5<./entering the joint limits of every joint.png>]
+<interesting q case.png, id=37, 521.69907pt x 835.62187pt>
+File: interesting q case.png Graphic file (type png)
+<use interesting q case.png>
+Package luatex.def Info: interesting q case.png  used on input line 118.
+(luatex.def)             Requested size: 521.69778pt x 835.61983pt.
+
+Overfull \hbox (131.69778pt too wide) in paragraph at lines 116--119
+[] 
+ []
+
+[6]
+Overfull \vbox (287.11983pt too high) has occurred while \output is active []
+
+
+[7<./interesting q case.png>]
+<inverted z axis .png, id=45, 521.69907pt x 604.50844pt>
+File: inverted z axis .png Graphic file (type png)
+<use inverted z axis .png>
+Package luatex.def Info: inverted z axis .png  used on input line 122.
+(luatex.def)             Requested size: 521.69778pt x 604.50696pt.
+
+Overfull \hbox (157.25648pt too wide) in paragraph at lines 120--123
+\TU/lmr/m/n/12 off.  [] 
+ []
+
+[8]
+Overfull \vbox (56.00696pt too high) has occurred while \output is active []
+
+
+[9<./inverted z axis .png>]
+<straight up.png, id=53, 475.7775pt x 496.85625pt>
+File: straight up.png Graphic file (type png)
+<use straight up.png>
+Package luatex.def Info: straight up.png  used on input line 126.
+(luatex.def)             Requested size: 475.77632pt x 496.85503pt.
+
+Overfull \hbox (320.57915pt too wide) in paragraph at lines 124--127
+\TU/lmr/m/n/12 eval-u-at-ing the ori-en-ta-tion of the end ef-fec-tor.  [] 
+ []
+
+[10<./straight up.png>]
+<ComputedWorkspace.png, id=59, 549.55313pt x 426.84468pt>
 File: ComputedWorkspace.png Graphic file (type png)
 <use ComputedWorkspace.png>
-Package luatex.def Info: ComputedWorkspace.png  used on input line 128.
+Package luatex.def Info: ComputedWorkspace.png  used on input line 165.
 (luatex.def)             Requested size: 274.7759pt x 213.42181pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
-[3<./ComputedWorkspace.png>] (./24Prob5output.m) [4]
-<ImageOfRobotZeroConfig.png, id=31, 115.93312pt x 77.53969pt>
+[11] (./24Prob5output.m [12<./ComputedWorkspace.png>]) [13]
+<ImageOfRobotZeroConfig.png, id=71, 115.93312pt x 77.53969pt>
 File: ImageOfRobotZeroConfig.png Graphic file (type png)
 <use ImageOfRobotZeroConfig.png>
-Package luatex.def Info: ImageOfRobotZeroConfig.png  used on input line 146.
+Package luatex.def Info: ImageOfRobotZeroConfig.png  used on input line 183.
 (luatex.def)             Requested size: 231.86566pt x 155.07895pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
+Underfull \hbox (badness 10000) in paragraph at lines 181--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--160
+Underfull \hbox (badness 10000) in paragraph at lines 194--197
 
  []
 
-[5<./ImageOfRobotZeroConfig.png>] [6] (./Lab1.aux))
+[14<./ImageOfRobotZeroConfig.png>] [15] (./Lab1shaun.aux))
 
 Here is how much of LuaTeX's memory you used:
- 4064 strings out of 480878
+ 4134 strings out of 480878
  100000,383344 words of node,token memory allocated
- 564 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 26 attribute, 52 glue_spec
-, 26 attribute_list, 1 write nodes
-   avail lists: 2:1779,3:46,4:448,5:3337,6:29,7:3070,8:14,9:5424,10:10,11:222
- 21592 multiletter control sequences out of 65536+200000
+ 572 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 28 attribute, 52 glue_spec
+, 28 attribute_list, 1 write nodes
+   avail lists: 2:1063,3:50,4:257,5:1887,6:20,7:2551,8:20,9:3059,10:16,11:171
+ 21627 multiletter control sequences out of 65536+200000
  46 fonts using 5179459 bytes
- 36i,8n,62p,664b,890s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,8n,62p,1197b,1017s stack positions out of 5000i,500n,10000p,200000b,50000s
 <//?/c:/users/shaun/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmon
 o12-regular.otf><//?/c:/users/shaun/appdata/local/programs/miktex/fonts/opentype
 /public/lm/lmroman12-regular.otf><//?/c:/users/shaun/appdata/local/programs/mikt
@@ -349,14 +422,16 @@ a/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><C:/Users/sh
 aun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
 Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Lab1.pdf (7 pages, 403059 bytes).
+/cmmi6.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shaun/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shaun/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Lab1shaun.pdf (16 pages, 547317 bytes).
 
-PDF statistics: 85 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
