@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.9.19)  23 SEP 2020 19:41
+This is LuaHBTeX, Version 1.12.0 (MiKTeX 20.6.29) (format=lualatex 2020.9.19)  23 SEP 2020 19:48
  restricted system commands enabled.
 **Lab1shaun.tex
 (./Lab1shaun.tex
@@ -410,7 +410,7 @@ Here is how much of LuaTeX's memory you used:
  572 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 28 attribute, 52 glue_spec
 , 28 attribute_list, 1 write nodes
-   avail lists: 2:1063,3:50,4:257,5:1887,6:20,7:2551,8:20,9:3059,10:16,11:171
+   avail lists: 2:1063,3:50,4:257,5:1887,6:20,7:2552,8:20,9:3059,10:16,11:172
  21627 multiletter control sequences out of 65536+200000
  46 fonts using 5179459 bytes
  36i,8n,62p,1197b,1017s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -429,7 +429,7 @@ e1/public/amsfonts/cm/cmr6.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shaun/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shaun/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Lab1shaun.pdf (16 pages, 547317 bytes).
+Output written on Lab1shaun.pdf (16 pages, 547326 bytes).
 
 PDF statistics: 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
