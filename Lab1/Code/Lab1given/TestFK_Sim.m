@@ -8,7 +8,7 @@ con = rosStart(true); % start ROS with gripper enabled
 
 % add command
 %q = [0 0 pi/2 1.7 0 0];
-q = [1.4 -1.2 -1.8 -1.9 1.5 100];
+q = [0 0 0 0 0 0];
 con = add_command(con,q);
 disp("Now the current state value is : ...");
 disp(con.cur_state);
