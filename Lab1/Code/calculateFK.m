@@ -51,6 +51,12 @@ for link = 1:5
     A = createA(a, alpha, d, theta);
     T = T*A;
     jointPositions(link+1,:) = T(1:3,4)';
+    if link == 4
+        p5=[0;0;L4;1];
+        T5=T*p5;
+        %jointPositions(link+1,1) = jointPositions(link+1,1) + L4;
+         jointPositions(link+1,:)=T5(1:3)';
+    end
 end
 
 T0e = T;
