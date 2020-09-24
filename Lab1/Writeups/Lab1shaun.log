@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.4)  23 SEP 2020 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.4)  23 SEP 2020 20:21
 entering extended mode
 **./Lab1shaun.tex
 (Lab1shaun.tex
@@ -328,33 +328,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--230
 
  []
 
-[12 <./ImageOfRobotZeroConfig.png>] [13] (Lab1shaun.aux) ) 
+[12 <./ImageOfRobotZeroConfig.png>])
+Runaway argument?
+style=Matlab-editor,caption={calculateFK.m]{Code/calculateFK.m} \par \ETC.
+! File ended while scanning use of \\lst@inputlisting.
+<inserted text> 
+                \par 
+<*> ./Lab1shaun.tex
+                   
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> ./Lab1shaun.tex
+                   
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 4161 strings out of 480790
- 57599 string characters out of 2894923
+ 4159 strings out of 480790
+ 57506 string characters out of 2894923
  345350 words of memory out of 3000000
  20155 multiletter control sequences out of 15000+200000
  538333 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,56p,1201b,2035s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Wesley Yee/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Use
-rs/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcs
-c10.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmex10.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Wesley Yee/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Wesley Yee/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Wesley 
-Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr6.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Wesley Yee/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Wesley Yee/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Lab1shaun.pdf (14 pages, 567316 bytes).
-PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 36i,8n,56p,1203b,2035s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
