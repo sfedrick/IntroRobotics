@@ -31,7 +31,7 @@ The ROS robot was modeled off of an actual physical robot located at Penn, but w
 	\includegraphics[scale=1]{Q1.png}
 	\caption{Revised symbolic representation}
 	\end{figure}
-\item FIX THIS
+\item FIX THESE BELOW
 \begin{equation}
 	T^{0}_{1} = \begin{bmatrix}
 	0 & 0 & 1 & 0mm\\
@@ -40,7 +40,6 @@ The ROS robot was modeled off of an actual physical robot located at Penn, but w
 	0 & 0 & 0 & 1
 	\end{bmatrix}
 \end{equation}
- FIX THIS
 \begin{equation}	
 	T^{1}_{2} = \begin{bmatrix}
 	0 & -1 & 1 & 0mm\\
@@ -49,7 +48,6 @@ The ROS robot was modeled off of an actual physical robot located at Penn, but w
 	0 & 0 & 0 & 1
 	\end{bmatrix}
 \end{equation}
-FIX THIS
 \begin{equation}	
 	T^{2}_{3} = \begin{bmatrix}
 	-\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & 0 & -132.4588mm\\
@@ -163,5 +161,8 @@ For example, $R$ states that the projection of the end effector's y axis $y_{e}$
 
 \item 
 \end{enumerate}
+
+\section{Appendix}
+
 
 \end{document}
