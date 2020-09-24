@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.4)  23 SEP 2020 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.19)  23 SEP 2020 22:09
 entering extended mode
 **./Lab1shaun.tex
 (Lab1shaun.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-18>
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
@@ -21,60 +21,47 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx
-.sty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.s
-ty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics
-.sty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\grap
-hics.cfg"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdft
-ex.def"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
-)
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.s
-ty"
+) (C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2020/01/20 v2.17e AMS math features
 \@mathmargin=\skip49
-
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.s
-ty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.st
-y"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen137
 ))
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
-y"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen138
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.st
-y"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count175
@@ -115,21 +102,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/matlab-prettifier
-\matlab-prettifier.sty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/matlab-prettifier\matla
+b-prettifier.sty
 Package: matlab-prettifier 2014/06/19 v0.3 A package for prettyprinting Matlab 
 source code
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
-"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\colo
-r.cfg"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -142,9 +126,7 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings
-.sty"
+) (C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count187
 \lst@gtempboxa=\box47
 \lst@token=\toks21
@@ -157,16 +139,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \lst@newlines=\count191
 \lst@lineno=\count192
 \lst@maxwidth=\dimen149
-
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.
-sty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count193
 \lst@skipnumbers=\count194
 \lst@framebox=\box48
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings
-.cfg"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
@@ -177,12 +156,58 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 \jayDepth@mlpr=\skip53
 \sectionRuleOffset@mlpr=\skip54
 \toks@mlpr=\toks22
+) (C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
-nd-pdfmode.def"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count198
+\calc@Bcount=\count199
+\calc@Adimen=\dimen150
+\calc@Bdimen=\dimen151
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count266
+\calc@Cskip=\skip57
+)
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/generic/atbegshi\atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)))
+\AM@pagewidth=\dimen152
+\AM@pageheight=\dimen153
+
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box49
+\AM@global@opts=\toks23
+\AM@pagecnt=\count267
+\AM@toc@title=\toks24
+\c@AM@survey=\count268
+\AM@templatesizebox=\box50
+)
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+mode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count198
-\l__pdf_internal_box=\box49
+\l__kernel_color_stack_int=\count269
+\l__pdf_internal_box=\box51
 ) (Lab1shaun.aux)
 \openout1 = `Lab1shaun.aux'.
 
@@ -201,31 +226,40 @@ LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
-pdf.mkii"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count199
-\scratchdimen=\dimen150
-\scratchbox=\box50
-\nofMPsegments=\count266
-\nofMParguments=\count267
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count268
-\MPscratchDim=\dimen151
-\MPnumerator=\count269
-\makeMPintoPDFobject=\count270
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count270
+\scratchdimen=\dimen154
+\scratchbox=\box52
+\nofMPsegments=\count271
+\nofMParguments=\count272
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count273
+\MPscratchDim=\dimen155
+\MPnumerator=\count274
+\makeMPintoPDFobject=\count275
+\everyMPtoPDFconversion=\toks26
 )
-("C:\Users\Wesley Yee\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
-opdf-base.sty"
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\c@lstlisting=\count271
- [1
+\c@lstlisting=\count276
+\AtBeginShipoutBox=\box53
 
-{C:/Users/Wesley Yee/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(C:\Users\shaun\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+[1
+
+{C:/Users/shaun/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
@@ -328,31 +362,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--230
 
  []
 
-[12 <./ImageOfRobotZeroConfig.png>])
-Runaway argument?
-style=Matlab-editor,caption={calculateFK.m]{Code/calculateFK.m} \par \ETC.
-! File ended while scanning use of \\lst@inputlisting.
-<inserted text> 
-                \par 
-<*> ./Lab1shaun.tex
-                   
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+[12 <./ImageOfRobotZeroConfig.png>] [13]
 
-! Emergency stop.
-<*> ./Lab1shaun.tex
-                   
-*** (job aborted, no legal \end found)
+Package pdfpages Warning: Option `page' is unknow to \includepdf.
+(pdfpages)                Did you mean `pages'? (Note the `s'!)
+(pdfpages)                OK, I'll proceed as if it were `pages'.
 
- 
+<Jupnotebook.pdf, id=74, 614.295pt x 794.97pt>
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf>
+Package pdftex.def Info: Jupnotebook.pdf  used on input line 248.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf>
+Package pdftex.def Info: Jupnotebook.pdf  used on input line 248.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+<Jupnotebook.pdf, id=77, page=1, 614.295pt x 794.97pt>
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 1>
+Package pdftex.def Info: Jupnotebook.pdf , page1 used on input line 248.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 1>
+Package pdftex.def Info: Jupnotebook.pdf , page1 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+[14]
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 1>
+Package pdftex.def Info: Jupnotebook.pdf , page1 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 1>
+Package pdftex.def Info: Jupnotebook.pdf , page1 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 1>
+Package pdftex.def Info: Jupnotebook.pdf , page1 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [15 <./Jupnotebook.pdf>]
+<Jupnotebook.pdf, id=135, page=2, 614.295pt x 794.97pt>
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 2>
+Package pdftex.def Info: Jupnotebook.pdf , page2 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 2>
+Package pdftex.def Info: Jupnotebook.pdf , page2 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+File: Jupnotebook.pdf Graphic file (type pdf)
+<use Jupnotebook.pdf, page 2>
+Package pdftex.def Info: Jupnotebook.pdf , page2 used on input line 248.
+(pdftex.def)             Requested size: 614.58406pt x 795.3441pt.
+ [16 <./Jupnotebook.pdf>] (Lab1shaun.aux) ) 
 Here is how much of TeX's memory you used:
- 4159 strings out of 480790
- 57506 string characters out of 2894923
- 345350 words of memory out of 3000000
- 20155 multiletter control sequences out of 15000+200000
+ 5241 strings out of 480790
+ 75074 string characters out of 2897301
+ 365520 words of memory out of 3000000
+ 21192 multiletter control sequences out of 15000+200000
  538333 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,56p,1203b,2035s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 40i,18n,56p,1203b,2037s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/shaun/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/shaun/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/shaun/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/User
+s/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi6.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb><C:/Users/shaun/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shaun/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shaun/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/shaun/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Lab1shaun.pdf (17 pages, 653450 bytes).
+PDF statistics:
+ 210 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+

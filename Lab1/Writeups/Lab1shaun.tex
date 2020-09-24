@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[framed]{matlab-prettifier}
-
+ \usepackage{pdfpages}
 \begin{document}
 \begin{titlepage}
 	\begin{center}
@@ -230,6 +230,7 @@ For example, $R$ states that the projection of the end effector's y axis $y_{e}$
 
 
 \item 
+\par{Yes, many points that would’ve collided with the frame of the robot are reachable in our predicted workspace. This occurred because neither Ros,Gazebo, or ourselves took collision into account. Withstanding those points, there were still points predicted as reachable, but were not actually reachable in the simulation. This is because our calculateFk did not take joint limits into account it only utilized the $T^{0}_{e}$. As a result, it was possible to input joint parameters that resulted in dramatically different results than the simulation, as long as those joint inputs were outside the designated joint limits defined by ros. A way to account for this would be to include joint limits in calculateFK. The inverse is not true; we did not find any points that were reachable in the simulation that were predicted as unreachable. The main sources or deviation from simulation and prediction was caused by not having sufficient checks of joint limits in calculateFk.}
 \end{enumerate}
 \section{Code Makeup}
 \par{ The code essentially implements DH4 convention to find the coordinate frames of each joint and the end effector. We use a helper function called createA.m to create an $A^{i-1}_{i}$. This function takes in DH4 parameters and outputs the corresponding $A^{i-1}_{i}$ matrix . We then create another matrix that contains all the relevant DH4 parameters, and by walking though each row in the DH4 parameter matrix,inputing it into create A, and post multiplying we were able to get the intermediate frames and $T^{0}_{e}$. Using joint coordinates and $T^{0}_{e}$ gave us the location of the end effector and its orientation. Using this in combination with walking through each joint to create the workspace, and getting the joint location of each joint in the base frame was simple matter of post multiplying until you got to the frame containing the desired joint location. This final matrix gave both the orientation and location of the joint. The only exception was joint 4 because the coordinate frame did not exist on the joint; as a result, we had to multiply $T^{0}_{4}$ with the column vector $q=[0,0,L_{4},1]$ to translate the frame $T^{0}_{4}$  to the location of joint 4.
@@ -239,10 +240,10 @@ For example, $R$ states that the projection of the end effector's y axis $y_{e}$
 \par{This lab was an exercise in implementing forward kinematics, in the simulated ROS environment. Despite the the sophistication of Ros, there were noticeable deviations from reality. The main deviation was a result of collision. The Robot was able to collide with itself with absolutely no resistance. There were also cases where the robot did not directly collide with itself, but instead entered positions that most certainly would've torn wires present in the real robot. We also didn't control the speed of the robot and focused primarily on the kinematics. These considerations are important because when we eventually use a real robot we will need to consider these differences to prevent damaging physical systems.
 }
 \section{Appendix}
-\lstinputlisting[style=Matlab-editor,caption={calculateFK.m]{Code/calculateFK.m}
+%\lstinputlisting[style=Matlab-editor,caption={calculateFK.m]{Code/calculateFK.m}
 	
-\lstinputlisting[style=Matlab-editor,caption={computeWorkspace.m]{Code/computeWorkspace.m}
+%\lstinputlisting[style=Matlab-editor,caption={computeWorkspace.m]{Code/computeWorkspace.m}
 	
-\lstinputlisting[style=Matlab-editor,caption={createA.m]{Code/createA.m}
-
+%\lstinputlisting[style=Matlab-editor,caption={createA.m]{Code/createA.m}
+\includepdf[page=-]{Jupnotebook}
 \end{document}
