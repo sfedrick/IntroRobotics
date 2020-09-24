@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.19)  23 SEP 2020 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.19)  23 SEP 2020 22:13
 entering extended mode
 **./Lab1shaun.tex
 (Lab1shaun.tex
@@ -327,11 +327,11 @@ Package pdftex.def Info: straight up.png  used on input line 189.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./inverted z axis .png>]
-<ComputedWorkspace.png, id=52, 549.55313pt x 426.84468pt>
+<ComputedWorkspace.png, id=52, 396.7322pt x 313.9228pt>
 File: ComputedWorkspace.png Graphic file (type png)
 <use ComputedWorkspace.png>
 Package pdftex.def Info: ComputedWorkspace.png  used on input line 197.
-(pdftex.def)             Requested size: 274.7759pt x 213.42181pt.
+(pdftex.def)             Requested size: 198.3656pt x 156.96101pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -417,7 +417,7 @@ Package pdftex.def Info: Jupnotebook.pdf , page2 used on input line 248.
 Here is how much of TeX's memory you used:
  5241 strings out of 480790
  75074 string characters out of 2897301
- 365520 words of memory out of 3000000
+ 357520 words of memory out of 3000000
  21192 multiletter control sequences out of 15000+200000
  538333 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -436,7 +436,7 @@ onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/shaun/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/shaun/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/shaun/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Lab1shaun.pdf (17 pages, 653450 bytes).
+Output written on Lab1shaun.pdf (17 pages, 458959 bytes).
 PDF statistics:
  210 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
