@@ -27,11 +27,15 @@ function [theta1, theta2, theta3, outOfPos] = GetP (C, upperLim, lowerLim, const
     theta = [theta1, theta2, theta3];
     
       % Check that theta1,2,3 are valid and inside joint limits
-    if (isnan(theta1) || isnan(theta2) || isnan(theta3))
+    if (isnan(theta2) || isnan(theta3))
             outOfPos1 = -1;
-    elseif (theta2 < lowerLim(2) || theta2 > upperLim(2))
+    end 
+    
+    if((theta2 < lowerLim(2) || theta2 > upperLim(2)) && outOfPos1~=-1)
         theta2 = -theta2;
-    elseif (theta3 < lowerLim(3) || theta3 > upperLim(3))
+    end 
+    
+    if ((theta3 < lowerLim(3) || theta3 > upperLim(3)) && outOfPos1~=-1)
         theta3 = -pi/2 + alpha-beta;
     end
     

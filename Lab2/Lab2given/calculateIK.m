@@ -25,8 +25,11 @@ d1 = 76.2;                      % Distance between joint 1 and joint 2
 a2 = 146.05;                    % Distance between joint 2 and joint 3
 a3 = 187.325;                   % Distance between joint 3 and joint 4
 d4 = 34;                        % Distance between joint 4 and joint 5
-d5 = 68;                        % Distance between joint 4 and end effector
+d5 = 68; % Distance between joint 4 and end effector
 
+isPos=1;
+threshhold=0.1;
+doMagic=0;
 % Joint limits
 lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
 upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
@@ -35,6 +38,28 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians 
 R0e=T0e(1:3,1:3);
 P=T0e(1:3,4);
 
-[theta1,theta2,theta3,theta4,theta5]=GetO(R0e,P,lowerLim,upperLim)
-[jointPos_R0e, R0e_check] = calculateFK([theta1, theta2, theta3, theta4, theta5])
+[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,lowerLim,upperLim);
+q=[theta1,theta2,theta3,theta4,theta5];
+if(outOfPos(1)==-1 && outOfPos(2)==0 && outOfPos(3)==0)
+    q=[nan,theta2,theta3,theta4,theta5];
+elseif(outOfPos(2)~=0 || outOfPos(3)~=0)
+    q=[];
+    isPos=0;
+end
+ 
+    
+if(isPos~=0)   
+    [jointPos_R0e, R0e_check] = calculateFK([theta1, theta2, theta3, theta4, theta5]);
+     R0e_check= R0e_check(1:3,1:3);
+     e= R0e-R0e_check;
+     [error,n]=sumsqr(e);
+     if(e>threshhold)
+         isPos=0;
+         doMagic=1;
+     end
+         
+end 
+
+if(doMagic)
+    %complete part 3 and find closest feasible orientation
 end
