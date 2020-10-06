@@ -19,8 +19,7 @@ R0e = [0, 0, 1;
 x0e = a3+d5;
 y0e = 0;
 z0e = d1+a2;
-P=[x0e,y0e,z0e];
-[theta1,theta2,theta3,theta4,theta5]=GetO(R0e,P);
+P=[x0e,y0e,z0e]
 
 R3e_check = [cos(theta4-pi/2)*cos(theta5), -cos(theta4-pi/2)*sin(theta5), -sin(theta4-pi/2);
             sin(theta4-pi/2)*cos(theta5), -sin(theta4-pi/2)*sin(theta5), cos(theta4-pi/2);
