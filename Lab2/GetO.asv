@@ -8,7 +8,7 @@ function[theta1,theta2,theta3,theta4,theta5]=GetO(R0e,P,upperLim,lowerLim)
     % Calculate position of wrist center
     [x0c,y0c,z0c] = GetxC(R0e,P,d5);
     
-    [theta1, theta2, theta3] = GetP([x0c,y0c,z0c],upperLim, lowerLim,[d1,a2,a3,d5]);
+    [theta1, theta2, theta3] = GetP([x0c,y0c,z0c],upper
 
     % Use FK to find R03
     [jointPos_R03, R03] = calculateFK_R03([theta1, theta2, theta3])
