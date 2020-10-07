@@ -40,6 +40,7 @@ P=T0e(1:3,4);
 
 [theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,lowerLim,upperLim);
 q=[theta1,theta2,theta3,theta4,theta5];
+%{
 if(outOfPos(1)==-1 && outOfPos(2)==0 && outOfPos(3)==0)
     q=[nan,theta2,theta3,theta4,theta5];
 elseif(outOfPos(2)~=0 || outOfPos(3)~=0)
@@ -62,4 +63,5 @@ end
 
 if(doMagic)
     %complete part 3 and find closest feasible orientation
+%}
 end

@@ -7,7 +7,7 @@ addpath('../Core') % references ROS interface and arm controller files you'll ne
 con = rosStart(true); % start ROS with gripper enabled
 
 % add command
-q=[-pi/2,0,pi/4,0,pi/2,0];
+q=[0   , 1.0591-pi/2 ,  -1,  -0.2387     , 0, 5];
 %q=[pi/4,0,0,0,0,0];
 %q = [0,0,0, 0,0,0];
 
