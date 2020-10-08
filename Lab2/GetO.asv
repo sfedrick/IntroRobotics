@@ -46,14 +46,14 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,upperLim,lowerL
         xf=cross(yf,zf);
     end
     
-    R3e=[xf;yf;zf];
+     R3e=
     theta5 = asin(-R3e(3,1));
     theta4 = asin(-R3e(2,3));
-   %{ 
+    
     theta1 = real(theta1);
     theta2 = real(theta2);
     theta3 = real(theta3);
     theta4 = real(theta4);
     theta5 = real(theta5);
-    %}
+    
 end
