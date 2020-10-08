@@ -3,10 +3,10 @@ output=value;
 if(-1.4<value<1.4)
     output=value;
 end
- 
-if(value>=0)
+
+if(value>0)
   output=output-pi;
-else
+elseif(value<0)
   output=output+pi;
 end
 
