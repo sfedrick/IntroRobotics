@@ -54,7 +54,6 @@ for link = 1:5
     if link == 4
         p5=[0;0;L4;1];
         T5=T*p5;
-        %jointPositions(link+1,1) = jointPositions(link+1,1) + L4;
          jointPositions(link+1,:)=T5(1:3)';
     end
 end

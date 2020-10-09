@@ -12,7 +12,10 @@ T0e = [[   0,    0,    1,   187.325+68];[   0,   -1,    0,   0];[  1,   0,   0, 
 
 % Target 4
 %T0e =[[  0.5054096, -0.8370580, -0.2095115, -45];[-0.0305796,  0.2252773, -0.9738147,-300];[0.8623375,  0.4985821,  0.0882604, 63 ];[0,0,0,1]];
+
 [q isPos] = calculateIKtest(T0e);
+%just position
 [jointPositions,T0etest] = calculateFK(q);
+%calculateFK(q)
 disp(T0e);
 disp(T0etest);
