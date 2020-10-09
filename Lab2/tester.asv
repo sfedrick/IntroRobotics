@@ -15,4 +15,4 @@ T0e = [[   0,    0,    1,   187.325+68];[   0,   -1,    0,   0];[  1,   0,   0, 
 [q isPos] = calculateIKtest(T0e);
 [jointPositions,T0etest] = calculateFK(q);
 disp(T0e);
-disp(T0etest);
+disp(Ttest);
