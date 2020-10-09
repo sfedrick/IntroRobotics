@@ -1,4 +1,4 @@
-function [outputArg1,outputArg2] = elbowUpTheta(C, constants,updown)
+function [theta1,theta2,theta3] = elbowUpTheta(C, constants,updown)
 %UNTITLED5 Summary of this function goes here
 %   Detailed explanation goes here
     x0c = C(1);

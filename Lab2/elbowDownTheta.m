@@ -1,4 +1,4 @@
-function [theta1,theta2,theta3] = elbowDown(C, constants)
+function [theta1,theta2,theta3] = elbowDownTheta(C, constants,updown)
 %ELBOWDOWN Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -10,7 +10,7 @@ function [theta1,theta2,theta3] = elbowDown(C, constants)
     a2 = constants(2);
     a3 = constants(3);
 
-    theta1 = atan2(y0c,x0c,z0c);
+    theta1 = atan2(y0c,x0c,z0c)+pi*updown;
     z0c=z0c-a1;
     theta3=-pi/2 -acos((x0c^2+y0c^2+z0c^2-a2^2-a3^2)/(2*a2*a3))+pi*updown;
     theta2=pi/2 -atan2(z0c,sqrt(x0c^2+y0c^2))+atan2(a3*sin(-pi/2-theta3),(a2+a3*cos(-pi/2-theta3)))+pi*updown;
