@@ -38,7 +38,7 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians 
 R0e=T0e(1:3,1:3);
 P=T0e(1:3,4);
 
-[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,lowerLim,upperLim);
+[theta1,theta2,theta3,theta4,theta5,outOfPos]=getO(R0e,P,lowerLim,upperLim);
 q=[theta1,theta2,theta3,theta4,theta5];
 isPos=0;
 end
