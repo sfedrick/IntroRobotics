@@ -1,64 +1,66 @@
-function[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,upperLim,lowerLim)
-    % Declare constants
+function[theta1,theta2,theta3,theta4,theta5,outOfPos]=getO(R0e,P,upperLim,lowerLim)
+  
+% Declare constants
     d1 = 76.2;
     a2 = 146.05;
     a3 = 187.325;
     d5 = 68; %mm
     
     % Calculate position of wrist center
-    [x0c,y0c,z0c] = GetxC(R0e,P,d5);
     
-    [theta1, theta2, theta3,outOfPos] = GetP([x0c,y0c,z0c],upperLim, lowerLim,[d1,a2,a3,d5]);
+    %truetheta1=atan2(P(2),P(1));
+    ztest=R0e(1:3,3);
+    r=[P(1),P(2),0]';
+    r=r/norm(r);
+    z0=[0,0,1]';
+    n=cross(r,z0);
+    n=n/norm(n);
+    %test if the orientation is valid and approximates R0e if it is not
+    approximate=dot( n,ztest);
+    error=0.01;
+    if( abs(approximate)>error)
+        display("This is an approximate orientation the orientation requested is not feasible");
+        %we pull the desired x0e y0e and z0e axis from R0e
+        x0e=R0e(1:3,1);
+        y0e=R0e(1:3,2);
+        z0e=R0e(1:3,3);
+        zp=project(n,z0e);
+        yp=project(n,y0e);
+        xp=project(n,x0e);
 
-    % Use FK to find R03
-    [jointPos_R03, R03] = calculateFK_R03([theta1, theta2, theta3]);
- 
-
-    % Find R3e
-    %find the desired rotation in terms of the wrist center orientation
-    R3e = R03'*R0e;
-    %we have R3e written relative to the wrist center rotation frame 
-    % so we can write the normal vector as the basis z3 vector in the wrist
-    % center frame
-    n=[0,0,1]';
-%     z0 = [0;0;1];
-%     R30 = R03';
-%     n = R30(1:3,3);
-    %we pull the desired x3d y3d and z3d axis in R3e
-    x3d=R3e(1:3,1);
-    y3d=R3e(1:3,2);
-    z3d=R3e(1:3,3);
-    %we project x3d y3d and z3d axis onto the y3 x3 plane
-    zp=project(n,z3d);
-    yp=project(n,y3d);
-    xp=project(n,x3d);
-    % we determine the order of the cross product and therefore which vector (x3d or y3d) 
-    %that  we project onto the the y3 x3 plane by how much length each vector
-    % losses when we project it onto the y3 x3 plane 
-    lossyp=abs(norm(y3d)-norm(yp));
-    lossxp=abs(norm(x3d)-norm(xp));
-    zf=zp/norm(zp);
-    %find the normal vector to zp in the y3 x3 plane 
-    normalzf=[zf(2),zf(1),0];
-    normalzf=normalzf/norm(zf);
-    if(lossxp<lossyp)
-        xf=normalzf;
-        yf=cross(zf,xf);
-    else
-        yf=normalzf;
+        lossyp=abs(norm(y0e)-norm(yp));
+        lossxp=abs(norm(x0e)-norm(xp));
+        zf=zp/norm(zp);
+        %using right hand rule
+        yf=cross(zp,z0);
         xf=cross(yf,zf);
+        %find the normal vector to zp in the y3 x3 plane 
+         % we determine the order of the cross product and therefore which vector (x0e or y0e) 
+        %that  we project onto the the z0 r plane by how much length each vector
+        % loses when we project it onto the y3 x3 plane 
+
+        if(lossxp<lossyp)
+            yf=cross(zf,xf);
+        else
+            xf=cross(yf,zf);
+        end
+        xf=xf/norm(xf);
+        yf=yf/norm(yf);
+        R0e=[xf yf zf];
     end
     
-   R3e=[xf;yf;zf']*R3e;
-    theta5 = asin(-R3e(3,1));
-    theta4 = asin(-R3e(2,3));
+    ztest=R0e(1:3,3);
+    %just to test that approx is working this should be zero
+    approximate=dot( n,ztest);
     
+    [x0c,y0c,z0c] = GetxC(R0e,P,d5);
+    [theta1, theta2, theta3,outOfPos] = getP([x0c,y0c,z0c],upperLim, lowerLim,[d1,a2,a3,d5]);
+    % Use FK to find R03 this doesn't work for some odd reason
+    [jointPos_R03, R03] = calculateFK_R03([theta1, theta2, theta3]);
+ 
     
-   %{ 
-    theta1 = real(theta1);
-    theta2 = real(theta2);
-    theta3 = real(theta3);
-    theta4 = real(theta4);
-    theta5 = real(theta5);
-    %}
+   R3e=(R03')*R0e;
+   theta4 = atan2(R3e(2,3),R3e(1,3));
+   theta5 = atan2(-R3e(3,1),-R3e(3,2));
+    
 end

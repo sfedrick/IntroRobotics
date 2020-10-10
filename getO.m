@@ -11,6 +11,7 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,upperLim,lowerL
     r=[P(1),P(2),0]';
     z0=[0,0,1]';
     n=cross(z0,r);
+    n=n/norm(n);
     %we pull the desired x0e y0e and z0e axis from R0e
     x0e=R0e(1:3,1);
     y0e=R0e(1:3,2);
@@ -23,17 +24,19 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,upperLim,lowerL
     lossxp=abs(norm(x0e)-norm(xp));
     zf=zp/norm(zp);
     %unsure about this order 
-    xf=cross(z0,zp);
-    yf=cross(z0,zp);
+    yf=cross(zp,z0);
+    xf=cross(yf,zf);
     %find the normal vector to zp in the y3 x3 plane 
      % we determine the order of the cross product and therefore which vector (x0e or y0e) 
     %that  we project onto the the z0 r plane by how much length each vector
     % loses when we project it onto the y3 x3 plane 
+    %{
     if(lossxp<lossyp)
         yf=cross(zf,xf);
     else
         xf=cross(yf,zf);
     end
+    %}
     R0e=[xf yf zf];
     
     [x0c,y0c,z0c] = GetxC(R0e,P,d5);
@@ -44,6 +47,6 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=GetO(R0e,P,upperLim,lowerL
     
    R3e=(R03')*R0e;
    theta4 = atan2(R3e(2,3),R3e(1,3));
-   theta5 = atan2(-R3e(1,3),-R3e(2,3));
+   theta5 = atan2(-R3e(3,1),-R3e(3,2));
     
 end

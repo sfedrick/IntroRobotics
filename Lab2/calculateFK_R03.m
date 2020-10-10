@@ -34,11 +34,11 @@ joint3 = q(3);
 jointPositions=zeros(4,3);
 R03 = eye(4,4);
 T = eye(4);
-DH_params = [0, -pi/2, L1, joint1; 
-            -L2, 0, 0, joint2+pi/2;
-            L3, 0, 0, joint3-pi/2];
-%             0, pi/2, 0, joint4 - pi/2;
-%             0, 0, L4+L5, joint5 + pi];
+DH_params =[0, -pi/2, L1, joint1; 
+            L2, 0, 0, joint2-pi/2;
+            L3, 0, 0, joint3+pi/2;];
+%            0, -pi/2, 0, joint4 - pi/2;
+  %          0, 0, L4+L5, joint5];
 
         %Calculate each intermediate homogeneous transformation matrix
 for link = 1:3
@@ -51,12 +51,7 @@ for link = 1:3
     A = createA(a, alpha, d, theta);
     T = T*A;
     jointPositions(link+1,:) = T(1:3,4)';
-    if link == 4
-        p5=[0;0;L4;1];
-        T5=T*p5;
-        %jointPositions(link+1,1) = jointPositions(link+1,1) + L4;
-         jointPositions(link+1,:)=T5(1:3)';
-    end
+   
 end
 
 R03 = T(1:3,1:3);
