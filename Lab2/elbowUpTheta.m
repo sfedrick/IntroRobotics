@@ -5,18 +5,24 @@ function [theta1,theta2,theta3] = elbowUpTheta(C, constants,updown)
     y0c = C(2);
     z0c = C(3);
     
-    d1 = constants(1);
-    a1 = d1;
+     r = sqrt(x0c^2 + y0c^2);
+     d1 = constants(1);
     a2 = constants(2);
     a3 = constants(3);
-    theta1 = atan2(y0c,x0c)+pi*updown;
-    r1 = sqrt(y0c^2 + x0c^2);
-    r2 = z0c - d1;
-    phi2 = atan2(r2,r1);
-    r3 = sqrt(r1^2 + r2^2);
-    phi1 = acos((a3^2-a2^2-r3^2)/(-2*a2*r3));
-    theta2 = phi2-phi1+pi*updown;
-    phi3 = acos((r3^2-a2^2-a3^2)/(-2*a2*a3));
-    theta3 = pi/2-phi3+pi*updown;
+    
+    z=z0c-d1;
+    s = sqrt(r^2+(z)^2);
+    
+    theta1 = atan2( y0c,x0c);
+    sigma=lawcosine(s,a2,a3);
+    A2=lawcosine(a2,s,a3);
+    A3=lawcosine(a3,a2,s);
+    beta=atan2(z,r);
+    theta2=pi/2-A3-beta;
+    theta3=pi/2-sigma;
+    
+    theta1 = atan2( y0c,x0c)+updown*pi;
+    theta2=-theta2;
+    theta3=-pi-theta3;
 end
 

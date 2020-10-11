@@ -1,11 +1,12 @@
-function[theta1,theta2,theta3,theta4,theta5,outOfPos]=getO(R0e,P,upperLim,lowerLim)
+function[theta1,theta2,theta3,theta4,theta5,isPos]=getO(R0e,P,upperLim,lowerLim)
   
 % Declare constants
     d1 = 76.2;
     a2 = 146.05;
     a3 = 187.325;
     d5 = 68; %mm
-    
+    inFeasible=0;
+    outOfPos=0;
     % Calculate position of wrist center
     
     %truetheta1=atan2(P(2),P(1));
@@ -19,7 +20,7 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=getO(R0e,P,upperLim,lowerL
     approximate=dot( n,ztest);
     error=0.01;
     if( abs(approximate)>error)
-        display("This is an approximate orientation the orientation requested is not feasible");
+        inFeasible=1; 
         %we pull the desired x0e y0e and z0e axis from R0e
         x0e=R0e(1:3,1);
         y0e=R0e(1:3,2);
@@ -49,6 +50,7 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=getO(R0e,P,upperLim,lowerL
         R0e=[xf yf zf];
     end
     
+    
     ztest=R0e(1:3,3);
     %just to test that approx is working this should be zero
     approximate=dot( n,ztest);
@@ -62,5 +64,24 @@ function[theta1,theta2,theta3,theta4,theta5,outOfPos]=getO(R0e,P,upperLim,lowerL
    R3e=(R03')*R0e;
    theta4 = atan2(R3e(2,3),R3e(1,3));
    theta5 = atan2(-R3e(3,1),-R3e(3,2));
+   rotations=[theta4,theta5];
+   rotlimupper=[upper(4),upper(5)];
+    rotlimlower=[upper(4),upper(5)];
+   [trash,checkO]=limitcheck(rotations,rotlimupper,rotlimlower);
+   if(~checkO)
+       inFeasible=1;
+   end
+   if(outOfPos)
+       isPos=0;
+       theta1=[];
+       theta2=[];
+       theta3=[];
+       theta4=[];
+       theta5=[];
+    elseif(~outOfPos && inFeasible)
+       isPos=0;
+    else
+        isPos=1;
+    end  
     
 end
