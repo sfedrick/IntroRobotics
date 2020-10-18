@@ -1,0 +1,10 @@
+function realPos = TestPoint(discPos, delta)
+%TESTPOINT spits out position of a disc
+
+realPos = [];
+for i=1:discPos    
+    realPos(i) = discPos(i)*delta;
+end
+
+end
+

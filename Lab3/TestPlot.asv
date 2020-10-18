@@ -1,0 +1,19 @@
+function [] = TestPlot(nodeOld, nodeNew, hasLine)
+% Plots line between 2 nodes and also plots the 2nd node
+
+plot(nodeNew);
+if (hasLine == true)
+    line = nodeOld-nodeNew;
+    step = norm(line)/1000;
+    %plot(nodeOld,nodeNew,'k.'); 
+    x = 1:step:line;
+    
+end
+
+end
+
+function plotLine = createPlotLine(nodeOld, x)
+    for disc= : x
+            
+    end
+end
