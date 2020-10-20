@@ -11,7 +11,7 @@ found=false;
 
 while(~found)
     
-   % compute a random point P in the 3D space
+   % create a random point P in the config space
    P=randpoint(dims);
    
    % calculate the index of closest node to random point P
@@ -22,8 +22,8 @@ while(~found)
    startNode=NodeStart(startIdx);
    endNode=NodeEnd(endIdx); 
    
-   % check if every discretized point on the line is within joint limits 
-   % and also that each link is not collided w/ an obstacle
+   % for every point on the line (representing end effector position),
+   % ensure that each link of robot has not collided w/ an obstacle
    Scheck1=checkLine(P,startNode);
    Echeck1=checkLine(P,endNode);
    

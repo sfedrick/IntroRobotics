@@ -9,7 +9,7 @@ function [OkLine] = checkLine(P, node, obstacles)
 % modify each of the obstacles s.t. their dimensions are increased by
 % 2*radius of current joint
 
-% check for collisions
+% check for collisions 
 checkCollision(line
 
 OkLine=true;
