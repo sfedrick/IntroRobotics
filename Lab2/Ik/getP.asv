@@ -12,6 +12,7 @@ ListJoint=[];
 %thetaup
 [theta1,theta2,theta3]=elbowDown(C, constants);
 ListJoint=[ListJoint;theta1,theta2,theta3];
+
 [theta1,theta2,theta3]=elbowUp(C, constants);
 ListJoint=[ListJoint;theta1,theta2,theta3];
 [theta1,theta2,theta3]=elbowUpTheta(C, constants,-1);

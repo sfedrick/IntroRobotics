@@ -18,9 +18,7 @@ while(~found)
    E=EdgeStart(Ei);
    LineS=makeLine(P,S);
    LineE=makeLine(P,E);
-   Scheck1=checkLine(LineS);
-   Echeck1=checkLine(LineE);
-   
+   Scheck=checkLine
    
     
 end
