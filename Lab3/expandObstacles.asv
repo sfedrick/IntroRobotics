@@ -1,0 +1,11 @@
+function [thiccBois] = expandObstacles(radius,obstacles)
+%EXPANDOBSTACLES This function takes in an obstacle array with multiple
+%obstacles and expands them based on an inputted radius
+
+[row,col]=size(obstacles);
+    
+obstacles(:,1:3)-radius;
+obstacles(:,4:6)+radius;
+
+end
+

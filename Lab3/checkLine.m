@@ -11,7 +11,8 @@ OkLine=true;
 % modify each of the obstacles s.t. their dimensions are increased by check
 % fk for each element of line 
 
-radius=5;
+bigRadius = 10;
+smallRadius=5;
 raddicheck=Inf;
 step=100;
 %{
@@ -34,41 +35,42 @@ L=length(line);
 
 
 
-%{
+
 for i=1:L
-    [jointPositions,TN]=calculateFK(line(i));
+    [jointPositions,TN]=calculateFK(line(i,:));
     [row,col]=size(jointPositions);
-    lines=[];
+    links=[];
     for j=1:row-1
         point1=jointPositions(j,:);
         point2=jointPositions(j+1,:);
-        lines=[lines;point1,point2];  
+        links=[links;point1,point2];  
     end
-    starts=lines(:,1:3);
-    ends=lines(:,3:6);
-    [row,col]=size(obstacles);
+    starts=links(:,1:3);
+    ends=links(:,4:6);
+    thiccObstacles = expandObstacles(bigRadius,obstacles);
+    [row,col]=size(thiccObstacles);
     for k=1:row
-        kcheck=detectCollision(starts, ends, obstacles(k,:));
-        if(kcheck==true)
+        kcheck=detectCollision(starts, ends, thiccObstacles(k,:));
+        if(max(kcheck)==1)
             OkLine=false;
         end
     end
     
 end
-%}
-for i=2:L
-    starts=line(i-1);
-    ends=line(i);
- 
-    [row,col]=size(obstacles);
-    for k=1:row
-        kcheck=detectCollision(starts, ends, obstacles(k,:));
-        if(kcheck==true)
-            OkLine=false;
-        end
-    end
-    
-end
+
+% for i=2:L
+%     starts=line(i-1,:);
+%     ends=line(i,:);
+%  
+%     [row,col]=size(obstacles);
+%     for k=1:row
+%         kcheck=detectCollision(starts, ends, obstacles(k,:));
+%         if(kcheck==1)
+%             OkLine=false;
+%         end
+%     end
+%     
+% end
 
 
 

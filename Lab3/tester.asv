@@ -1,0 +1,37 @@
+start = [0,0,0,0,0,0];
+goal = [0,0,1.1,0,0,0];
+[jointPositionsStart,T0e] = calculateFK(start);
+[jointPositionsEnd,T0e] = calculateFK(end);
+
+hold on;
+% Plot the robot links in the start configuration
+[row, col] = size(jointPositionsStart);
+for joint=1:row-1
+    linkPoint1 = jointPositionsStart(joint,:);
+    linkPoint2 = jointPositionsStart(joint+1,:);    
+    TestPlot(linkPoint1,linkPoint2,1,'g');
+end
+
+% Plots the obstacle
+obstacle(-0.4,-0.4,0, 0.4,0.4,0.01,[1 0 0]);
+
+nodeStart=[0,0,-.1];
+nodeEnd=[0,0,0.2];
+%node2=[2,2,0];
+
+
+cube = [-0.4 -0.4 0 0.4 0.4 0.01];
+success = 0;
+checkLineBool = checkLine(nodeStart,nodeEnd,cube)
+if (checkLineBool)
+    success = 1;
+end
+TestPlot(nodeStart, nodeStart, 0);
+TestPlot(nodeEnd, nodeEnd, 0);
+TestPlot(nodeStart, nodeEnd, success);
+
+xlabel('X axis')
+ylabel('Y axis')
+zlabel('Z axis')
+hold off;
+
