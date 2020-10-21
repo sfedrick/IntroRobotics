@@ -12,9 +12,9 @@ goal = [0,0,1.1,0,0,0];
 map = loadmap('map1.txt');
 
 % Find collision-free path using RRT to get list of waypoints
-%[path] = rrt(map, start, goal);
+[path] = rrt(map, start, goal);
 
-[path] = astar(map, start, goal);
+%[path] = astar(map, start, goal);
 
 %start ROS
 lynx = ArmController();

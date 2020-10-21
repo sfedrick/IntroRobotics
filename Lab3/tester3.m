@@ -21,7 +21,7 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians 
 
 dims = [lowerLim;upperLim]';
 
-[Waypoints] = RRT(dims,cube,start,goal,3,1)
+[Waypoints] = ItWerks(dims,cube,start,goal,3,1)
 
 xlabel('X axis')
 ylabel('Y axis')
