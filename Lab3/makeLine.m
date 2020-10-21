@@ -1,7 +1,7 @@
 function [discreteLine] = makeLine(initial,final,step)
 t=0:1/(step-1):1;
 v=final-initial;
-norm(t(1)*v(:))
+
 discreteLine=[];
     for i=1:length(t)
     newD=initial +t(i)*v;

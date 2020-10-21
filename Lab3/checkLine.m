@@ -33,7 +33,6 @@ end
 
 
 
-
 for i=1:L
     [jointPositions,TN]=calculateFK(line(i,:));
     [row,col]=size(jointPositions);
@@ -53,7 +52,6 @@ for i=1:L
             OkLine=false;
         end
     end
-    
 end
 
 %hard code self collision here 
