@@ -35,15 +35,19 @@ while(~found)
    if (Scheck1 == true && Echeck1 == false)
        NodeStart = [NodeStart; P];
        % add edge to the edge matrix from startNode --> P
+       EdgeStart = addEdge(EdgeStart,startIdx);
    end
    % if Echeck1 is true and Scheck1 is false, add to end tree
    if (Echeck1 == true && Scheck1 == false)
        NodeEnd = [NodeEnd; P];
        % add edge to edge matrix from endNode --> P
+       EdgeEnd = addEdge(EdgeEnd,endIdx);
    end
    % if Scheck1 and Echeck1 are true, then we have connected the path
    if (Scheck1 == true && Echeck1 == true)
        found = true;
+       EdgeStart = addEdge(EdgeStart,startIdx);
+       EdgeEnd = addEdge(EdgeEnd,endIdx);
        % walk through matrix and record path
        
    end

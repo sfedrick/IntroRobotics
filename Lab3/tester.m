@@ -15,11 +15,6 @@ colors=[1,0,0;
         0,1,0];
 obstacle(thiccCube,colors);
 
-
-
-
-
-
 success = 0;
 checkLineBool = checkLine(start,goal,cube);
 if (checkLineBool)
