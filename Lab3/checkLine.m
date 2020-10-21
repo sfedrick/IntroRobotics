@@ -15,22 +15,20 @@ bigRadius = 10;
 smallRadius=5;
 raddicheck=Inf;
 step=100;
-%{
-while(raddicheck>radius)
+
+while(raddicheck>smallRadius)
     step=step+10;
     line=makeLine(node,P,step);
     L=length(line);
-    [jointPositions,TN]=calculateFK(line(0));
-    [jointPositions,TP]=calculateFK(line(1));
+    [jointPositions,TN]=calculateFK(line(1,:));
+    [jointPositions,TP]=calculateFK(line(2,:));
     Reali_1=TN(:,1:3);
     Reali=TP(:,1:3);
     raddicheck=norm(Reali_1-Reali);
 end
-%}
 
-%delete when implemented corecttly 
-line=makeLine(node,P,step);
-L=length(line);
+
+
 %delete the two above lines when implemented properly
 
 
@@ -58,20 +56,7 @@ for i=1:L
     
 end
 
-% for i=2:L
-%     starts=line(i-1,:);
-%     ends=line(i,:);
-%  
-%     [row,col]=size(obstacles);
-%     for k=1:row
-%         kcheck=detectCollision(starts, ends, obstacles(k,:));
-%         if(kcheck==1)
-%             OkLine=false;
-%         end
-%     end
-%     
-% end
-
+%hard code self collision here 
 
 
 end

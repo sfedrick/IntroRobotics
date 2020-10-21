@@ -7,12 +7,17 @@ hold on;
 
 
 % Plots the obstacle
-obstacle(130,-300, 96.825,  400, 300, 113.175,[1 0 0]);
-obstacle(150, 60,  -50.0, 400, 66.7,  350.0,[0 1 0]); 
-
-
 cube = [130 -300 96.825  400 300 113.175;
     150 60  -50.0 400 66.7  350.0];
+
+thiccCube=expandObstacles(10,cube);
+colors=[1,0,0;
+        0,1,0];
+obstacle(thiccCube,colors);
+
+
+
+
 
 
 success = 0;
