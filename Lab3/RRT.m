@@ -49,6 +49,7 @@ while(~found)
        EdgeStart = addEdge(EdgeStart,startIdx);
        EdgeEnd = addEdge(EdgeEnd,endIdx);
        % walk through matrix and record path
+       Waypoints=ConnectTrees(EdgeStart,EdgeEnd,NodeStart,NodeEnd);
        
    end
 end
