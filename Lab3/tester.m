@@ -1,4 +1,4 @@
-start = [.4,0,0,0,0,0];
+start = [0,0,0,0,0,0];
 goal = start+0.001;
 [jointPositionsStart,T0e] = calculateFK(start);
 [jointPositionsEnd,T0e] = calculateFK(goal);
@@ -9,6 +9,7 @@ hold on;
 % Plots the obstacle
 cube = [130 -300 96.825  400 300 113.175;
     150 60  -50.0 400 66.7  350.0];
+cube=loadmap('map1.txt').obstacles;
 
 thiccCube=expandObstacles(10,cube);
 colors=[1,0,0;
@@ -40,5 +41,6 @@ end
 xlabel('X axis')
 ylabel('Y axis')
 zlabel('Z axis')
+axis equal
 hold off;
 

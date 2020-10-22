@@ -1,7 +1,7 @@
 clear
 clc
 
-addpath('../Core') % references ROS interface and arm controller files you'll need for every lab
+
 
 % start ROS 
 con = rosStart(true); % start ROS with gripper enabled

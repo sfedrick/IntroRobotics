@@ -15,6 +15,7 @@ while(~found)
         %plot the two trees 
         plotJointPos(NodeStart(end,:),'b');
         plotJointPos(NodeEnd(end,:),'r');
+        shg
     end
    % create a random point P in the config space
    P=randpoint(dims);

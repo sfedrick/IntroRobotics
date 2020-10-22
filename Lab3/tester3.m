@@ -1,9 +1,9 @@
 clc;
 clear;
 
-start = [0,0,0,0,0,0];
-goal = [0,0,1.1,0,0,0];
-f1 = figure(1);
+start = [0,0,0,0,0.5,0];
+goal = [1,1,1.1,0,0,0];
+axis equal
 hold on;
 
 % Plots the obstacle
@@ -21,10 +21,11 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians 
 
 dims = [lowerLim;upperLim]';
 
-[Waypoints] = ItWerks(dims,cube,start,goal,3,1)
+[Waypoints] = ItWerks(dims,cube,start,goal,1,1);
 
 xlabel('X axis')
 ylabel('Y axis')
 zlabel('Z axis')
+axis equal
 hold off;
 
