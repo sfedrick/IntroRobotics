@@ -15,7 +15,8 @@ lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians 
 upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
 dims = [lowerLim;upperLim]';
 
-path=ItWerks(dims,Obstacles,start,goal,0,0);
+smallpath=ItWerks(dims,Obstacles,start,goal,0,0);
+path=ExpandPath(smallpath,100);
 
 end
 
