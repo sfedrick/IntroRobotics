@@ -1,4 +1,4 @@
-start = [1.5,.7,1.7,.2,-.91,15];
+start = [-1.5,.7,1.7,.2,-.9];
 goal = start+0.01;
 [jointPositionsStart,T0e] = calculateFK(start);
 [jointPositionsEnd,T0e] = calculateFK(goal);

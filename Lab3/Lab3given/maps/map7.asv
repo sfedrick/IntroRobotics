@@ -1,0 +1,16 @@
+# example map
+#
+# usage:
+# element x_min y_min z_min x_max y_max z_max
+#
+# you must specify the boundary of your map using the 'boundary' element
+# and can optionally include obstacles using the 'block' element
+
+boundary -400.0 -400.0 -200.0 400.0 400.0 500.0
+
+
+block 130 200 96.825  160 230 113.175
+    50 100 150 70 130 180
+    120 50 35 140 70 55
+    120 75 100 135 95 120
+    10 160 180 160 170 190];

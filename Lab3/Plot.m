@@ -1,20 +1,23 @@
 
-start = [0,0,0,0,0,0];
-goal = [0,0,1.1,0,0,0];
+start = [1.5,.7,1.7,.2,-.91,15];
+goal = [1,1.3,-1.5,1.5,0,0];
 
 
 
-map = loadmap('map1.txt');
+map = loadmap('map7.txt');
 cube=map.obstacles;
 tic 
-%[path] = rrt(map, start, goal);
-[path] = astar(map, start, goal);
+[path] = rrt(map, start, goal);
+%[path] = astar(map, start, goal);
 toc
 
 [row,col]=size(path);
 thiccCube=expandObstacles(10,cube);
 colors=[1,1,0;
-        0,1,1];
+        0,1,1;
+        0,.5,.5;
+        .5,.5,0;
+        1,.5,1];
 hold on
 set(gca,'Fontsize',20);
 obstacle(thiccCube,colors);
