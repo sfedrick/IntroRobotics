@@ -13,8 +13,8 @@ while(~found)
     counter = length(NodeStart);
     if(plot && mod(counter,plotStep)==0)        
         %plot the two trees 
-        plotJointPos(NodeStart(end,:),'b');
-        plotJointPos(NodeEnd(end,:),'r');
+        plotJointPos(NodeStart(end,:),'b',4);
+        plotJointPos(NodeEnd(end,:),'r',4);
         shg
     end
    % create a random point P in the config space
