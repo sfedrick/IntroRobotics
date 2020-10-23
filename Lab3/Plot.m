@@ -1,17 +1,17 @@
 
-start = [0,0,0,0,0.5,0];
-goal = [1,1,1.1,0,0,0];
+start = [0,0,0,0,0,0];
+goal = [0,0,1.1,0,0,0];
 
 
 
-map = loadmap('Map1.txt');
+map = loadmap('map1.txt');
 cube=map.obstacles;
 tic 
-[path] = rrt(map, start, goal);
+%[path] = rrt(map, start, goal);
+[path] = astar(map, start, goal);
 toc
 
 [row,col]=size(path);
-%[path] = astar(map, start, goal);
 thiccCube=expandObstacles(10,cube);
 colors=[1,1,0;
         0,1,1];
