@@ -13,7 +13,8 @@ function [time, totalPathReal, totalPathConfig] = calculatePathDistance(isRRT, m
     if (isRRT)
         [path] = rrt(map, start, goal);
     else
-        [path] = astar(map, start, goal);
+        [smallpath] = astar(map, start, goal);
+        [path] = expandPath(smallpath, 100);
     end
 
     % Calculate waypoint path of end effector in real distance and config space distance
