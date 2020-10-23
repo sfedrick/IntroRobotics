@@ -29,13 +29,13 @@ end
 for joint=1:row-1
     linkPoint1 = jointPositionsEnd(joint,:);
     linkPoint2 = jointPositionsEnd(joint+1,:);    
-    TestPlot(linkPoint1,linkPoint2,success,'g');
+    TestPlot(linkPoint1,linkPoint2,success,'g',1);
 end
 
 % Plots the nodes regardless if there is no collision or not
 for joint=1:row
     linkPoint1 = jointPositionsEnd(joint,:); 
-    TestPlot(linkPoint1,linkPoint1,0,'b');
+    TestPlot(linkPoint1,linkPoint1,0,[0 0 1],1);
 end
 
 xlabel('X axis')
