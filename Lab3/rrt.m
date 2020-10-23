@@ -18,7 +18,7 @@ dims = [lowerLim;upperLim]';
 %smallpath=ItWerks(dims,Obstacles,start,goal,1,1);
 %rrt planner
 smallpath=ItWerks(dims,Obstacles,start,goal,0,0);
-path=ExpandPath(smallpath,15);
+path=ExpandPath(smallpath,100);
 %path=smallpath;
 end
 
