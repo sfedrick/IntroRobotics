@@ -16,9 +16,11 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians 
 dims = [lowerLim;upperLim]';
 %debug plotter
 %smallpath=ItWerks(dims,Obstacles,start,goal,1,1);
+%path=smallpath;
+
 %rrt planner
 smallpath=ItWerks(dims,Obstacles,start,goal,0,0);
 path=ExpandPath(smallpath,15);
-%path=smallpath;
+
 end
 

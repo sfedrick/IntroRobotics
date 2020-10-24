@@ -1,6 +1,6 @@
 
-start = [1.5,.7,1.7,.2,-.91,15];
-goal = [1,1.3,-1.5,1.5,0,0];
+start = [0,0,0,0,0,0,0];
+goal = [0,1,1,1,1,1];
 
 
 
@@ -34,4 +34,5 @@ end
 xlabel('X axis')
 ylabel('Y axis')
 zlabel('Z axis')
+axis equal
 hold off
