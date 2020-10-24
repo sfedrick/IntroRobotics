@@ -19,6 +19,10 @@ dims = [lowerLim;upperLim]';
 %path=smallpath;
 
 %rrt planner
+cube = [10.001 -0.001 5 10.002 0 5;
+        -10.001 -0.001 5 -10.002 0 5;];
+Obstacles = [Obstacles;cube];
+
 smallpath=ItWerks(dims,Obstacles,start,goal,0,0);
 path=ExpandPath(smallpath,15);
 
