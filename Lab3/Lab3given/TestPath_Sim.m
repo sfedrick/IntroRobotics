@@ -7,14 +7,14 @@ addpath('../Core')
 %% Simulation Parameters
 
 start = [0     0     0     0     0     0];
-goal = [-1.4,0,-1,0,0,0];
+goal = [0,0,1.4,0,0,0];
 
-map = loadmap('Map4.txt');
+map = loadmap('map4.txt');
 
 % Find collision-free path using RRT to get list of waypoints
-[path] = rrt(map, start, goal);
-[row,col]=size(path);
-%[path] = astar(map, start, goal);
+%[path] = rrt(map, start, goal);
+%[row,col]=size(path);
+[path] = astar(map, start, goal);
 
 %start ROS
 lynx = ArmController();
