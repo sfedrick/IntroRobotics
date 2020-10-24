@@ -18,19 +18,13 @@ dims = [lowerLim;upperLim]';
 %smallpath=ItWerks(dims,Obstacles,start,goal,1,1);
 %path=smallpath;
 
-%rrt planner conservative self collisions much slower \
-%{
-
-cube =[10.001 -10 5 15.002 10 10;
-        -15.001 -10 5 -10.002 10 10;];
-    %}
-%rrt planner less conservative
-cube= [10.001 -0.1 5 12.002 1 10;
-        -10.001 -0.1 5 -12.002 1 10;];   
+%rrt planner
+cube = [10.001 -0.001 5 10.002 0 5;
+        -10.001 -0.001 5 -10.002 0 5;];
 Obstacles = [Obstacles;cube];
 
 smallpath=ItWerks(dims,Obstacles,start,goal,0,0);
-path=ExpandPath(smallpath,15);
+path=ExpandPath(smallpath,150);
 
 end
 

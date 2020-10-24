@@ -1,4 +1,5 @@
-start = [0,0,0,0,0.0,0];
+%start = [1.3, 0.7,1.7,0.2,-0.91,15];
+start = [0, 0,0.95,.9,0,0];
 goal = start+0.01;
 [jointPositionsStart,T0e] = calculateFK(start);
 [jointPositionsEnd,T0e] = calculateFK(goal);
@@ -12,8 +13,8 @@ hold on;
 %     120 50 35 140 70 55;
 %     120 75 100 135 95 120;
 %     10 160 180 160 170 190];
-cube = [10.001 -0.001 5 10.002 0 5;
-        -10.001 -0.001 5 -10.002 0 5;];
+cube= [10.001 -0.1 5 12.002 1 10;
+        -10.001 -0.1 5 -12.002 1 10;];   
 %%cube=loadmap('map1.txt').obstacles;
 
 thiccCube=expandObstacles(10,cube);

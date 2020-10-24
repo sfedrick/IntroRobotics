@@ -1,4 +1,4 @@
-function [jointPositions,T0e] = calculateFK(q)
+function [jointPositions,T0e] = calculateFK_ours(q)
 % CALCULATEFK - 
 %
 % DO NOT MODIFY THE FUNCTION DECLARATION
@@ -24,6 +24,10 @@ L2 = 146.05;  % distance between joint 1 and joint 2
 L3 = 187.325; % distance between joint 2 and joint 3
 L4 = 34;      % distance between joint 3 and joint 4
 L5 = 34;      % distance between joint 4 and center of gripper
+
+
+
+
 
 %% Your code here
 joint1 = q(1);
@@ -54,7 +58,7 @@ for link = 1:5
     if link == 4
         p5=[0;0;L4;1];
         T5=T*p5;
-        %jointPositions(link+1,1) = jointPositions(link+1,1) + L4;
+%         jointPositions(link+1,1) = jointPositions(link+1,1) + L4;
          jointPositions(link+1,:)=T5(1:3)';
     end
 end

@@ -6,15 +6,15 @@ addpath('../Core')
 
 %% Simulation Parameters
 
-start = [0     0     0     0     0     0];
-goal = [0,0,1.4,0,0,0];
+start = [1.3, 0.7,1.7,0.2,-0.91,15];
+goal = [1.3, 0.7,1.7,0.2,-0.91,15];
 
-map = loadmap('map4.txt');
+map = loadmap('map7.txt');
 
 % Find collision-free path using RRT to get list of waypoints
-%[path] = rrt(map, start, goal);
-%[row,col]=size(path);
-[path] = astar(map, start, goal);
+[path] = rrt(map, start, goal);
+[row,col]=size(path);
+%[path] = astar(map, start, goal);
 
 %start ROS
 lynx = ArmController();
@@ -39,7 +39,7 @@ for target_index = 1:length(path(:,1))
         
         collision = collision | lynx.is_collided();
         pause(0.1)
-        error=0.1;
+        error=0.2;
         % Add Student code here to decide if controller should send next
         % target or continue to wait. Do NOT add additional pauses to control
         % loop. You will likely want to use lynx.get_state() to decide when to
