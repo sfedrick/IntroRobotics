@@ -1,5 +1,5 @@
 %start = [1.3, 0.7,1.7,0.2,-0.91,15];
-start = [0, 0,0.95,.9,0,0];
+start = [0, 0,0.95,1.5,0,0];
 goal = start+0.01;
 [jointPositionsStart,T0e] = calculateFK(start);
 [jointPositionsEnd,T0e] = calculateFK(goal);
@@ -15,7 +15,7 @@ hold on;
 %     10 160 180 160 170 190];
 cube= [10.001 -0.1 5 12.002 1 10;
         -10.001 -0.1 5 -12.002 1 10;];   
-%%cube=loadmap('map1.txt').obstacles;
+cube=loadmap('map1.txt').obstacles;
 
 thiccCube=expandObstacles(10,cube);
 colors=[1,1,0;

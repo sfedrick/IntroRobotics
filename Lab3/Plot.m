@@ -1,5 +1,5 @@
 
-start = [1.3, 0.7,1.7,0.2,-0.91,15];
+start = [0,0,0,0,0,0];
 goal = [1,1.3,-1.5,1.5,0.0,0];
 
 
@@ -7,8 +7,8 @@ goal = [1,1.3,-1.5,1.5,0.0,0];
 map = loadmap('map7.txt');
 cube=map.obstacles;
 tic 
-[path] = rrt(map, start, goal);
-%[path] = astar(map, start, goal);
+%[path] = rrt(map, start, goal);
+[path] = astar(map, start, goal);
 toc
 
 [row,col]=size(path);
