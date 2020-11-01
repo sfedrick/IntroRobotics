@@ -1,5 +1,5 @@
-function [v] = FKvelocity(qdot,qconfig)
-J=CreateJac(qconfig,6);
+function [v] = FKvelocity(qdot,qconfig,joint)
+J=CreateJac(qconfig,joint);
 v=J*qdot';
 end
 

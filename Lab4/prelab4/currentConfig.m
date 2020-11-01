@@ -1,4 +1,4 @@
-function [jointPositions,zaxis] = calculateFKvelocity(q)
+function [jointPositions,zaxis] = currentConfig(q)
 % CALCULATEFK - 
 %
 % DO NOT MODIFY THE FUNCTION DECLARATION

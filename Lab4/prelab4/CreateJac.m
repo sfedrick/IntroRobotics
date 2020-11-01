@@ -1,7 +1,7 @@
 function [J] = CreateJac(q,pointinterest)
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
-[jointPositions,zaxis]=calculateFKvelocity(q);
+[jointPositions,zaxis]=currentConfig(q);
 Oe=jointPositions(pointinterest,:);
 J=[];
     for i=1:pointinterest-1
@@ -9,8 +9,10 @@ J=[];
       Si=createS(zi_1);
       Oi=Oe-jointPositions(i,:);
       Jvi=Si*Oi';
-      J=[J,Jvi];
-      
+      Jwi=zi_1;
+      Ji=[Jvi;Jwi];
+      J=[J,Ji];
+  
     end
 end
 
