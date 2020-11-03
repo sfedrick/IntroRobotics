@@ -1,0 +1,18 @@
+function [] = TestPlot(node1, nodeNew, hasLine, color, width)
+% Plots line between 2 nodes and also plots the 2nd node
+
+hold on;
+
+if (hasLine == true)
+    line = node1-nodeNew;
+    step = line/1000;
+    
+    v1=node1;
+    v2=nodeNew;
+    v=[v2;v1];
+    plot3(v(:,1),v(:,2),v(:,3),'Color',color,'linewidth',width);
+
+end
+
+end
+
