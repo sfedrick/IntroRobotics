@@ -39,7 +39,7 @@ Rv=rank([J,v]);
 if(Rj==Rv)
     disp("this is feasible");
 else
-    disp("this is infeasible");
+    disp("this is infeasible the given dq is a least squared approximation");
 end
 
 end
