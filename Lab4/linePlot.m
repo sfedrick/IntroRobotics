@@ -4,7 +4,6 @@ function [] = linePlot(point1, point2, hasLine, color, width)
 hold on;
 
 if (hasLine == true)
-    line = point1-point2;
     
     v1=point1;
     v2=point2;
