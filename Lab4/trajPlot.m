@@ -19,9 +19,9 @@ plot3(d(1),d(2),d(3),color,'MarkerSize',10);
 
 % Plots the axes
 if(axisplot)
-    linePlot(d,x+d,1,[1,0,0],4); % x = red
-    linePlot(d,y+d,1,[0,1,0],4); % y = green
-    linePlot(d,z+d,1,[0,0,1],4); % z = blue
+    linePlot(d,(x+d),1,[1,0,0],2); % x = red
+    linePlot(d,(y+d),1,[0,1,0],2); % y = green
+    linePlot(d,(z+d),1,[0,0,1],2); % z = blue
 end
 end
 

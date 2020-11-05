@@ -5,7 +5,6 @@ hold on;
 
 if (hasLine == true)
     line = point1-point2;
-    step = line/1000;
     
     v1=point1;
     v2=point2;
