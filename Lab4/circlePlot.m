@@ -12,8 +12,9 @@ for i=1:length(t)
     v(2,i) = r*sin(t(i));
     v(3,i) = r*cos(t(i));
 end
-v(1,:) = NaN;
-v(4:6,:) = NaN;
+v(6,:)=-1;
+%v(1,:) = NaN;
+%v(4:6,:) = NaN;
 
 hold on
 
