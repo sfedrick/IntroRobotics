@@ -7,13 +7,13 @@ dt = t(2) - t(1);
 r = 50;
 
 % initialize velocity values at each time step for circle
-v = zeros(6,length(t));
-for i=1:length(t)
-    v(2,i) = r*sin(t(i));
-    v(3,i) = r*cos(t(i));
-end
-v(1,:) = NaN;
-v(4:6,:) = NaN;
+
+v = [1,10,10,0,0,0];
+
+
+
+v(1) = NaN;
+v(4:6) = NaN;
 
 hold on
 
@@ -26,8 +26,8 @@ for joint=1:5
     linkPoint2 = jointPos(joint+1,:);    
     linePlot(linkPoint1,linkPoint2,1,[0,0,0],2);
 end
-for i=1:length(v)
-    qd = IKvelocity(v(1:6,i),q,jointDesired);
+for i=1:50
+    qd = IKvelocity(v,q,jointDesired);
     for j=1:length(q)
         if (j >= jointDesired)
             qd = [qd; q(j)]; 

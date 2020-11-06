@@ -20,12 +20,12 @@ plot3(d(1),d(2),d(3),color,'MarkerSize',10);
 % Plots the axes
 if(axisplot)
     [Px1,Px2]=longerLines(d,x+d,10);
-    [Py1,Py2]=longerLines(d,y+d,10);
-    [Pz1,Pz2]=longerLines(d,z+d,10);
+    
     linePlot(Px1,Px2,1,[1,0,0],2); % x = red
-    linePlot(Py1,Py2,1,[0,1,0],2); % x = red
-    linePlot(Pz1,Pz2,1,[0,0,1],2); % x = red
- 
+    linePlot(Px1,Px2,1,[1,0,0],2); % x = red
+    linePlot(Px1,Px2,1,[1,0,0],2); % x = red
+    linePlot(d,(y+d),1,[0,1,0],2); % y = green
+    linePlot(d,(z+d),1,[0,0,1],2); % z = blue
 end
 end
 
