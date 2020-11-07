@@ -1,7 +1,7 @@
 % Fill in this file with your code for Analysis question #4.
 
 % # Discretizations for each joint variable
-discStep = 25;
+discStep = 10;
 
 %Link Lengths
 L1 = 76.2;
@@ -20,23 +20,32 @@ z = [];
 % Compute the end effector Cartesian coordinate for each permutation of 
 % joint variable
 joint=6;
+lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
+upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
+dims = [lowerLim;upperLim]';
+random=100000;
+close=0.05;
+closerandom=20;
 hold on;
-for joint1 = -1.4:2.8/discStep:1.4
-    for joint2 = -1.2:2.6/discStep:1.4
-        for joint3 = -1.4:3.1/discStep:1.7
-            for joint4 = -1.9:3.6/discStep:1.7
-                for joint5 = -2:3.5/discStep:1.5
-                   qconfig=[joint1 ,joint2,joint3,joint4,joint5];
-                   J=CreateJac(qconfig,joint);
-                   J=round(J);
-                   if(rank(J)<5)
-                       print("percent")
-                       
-                        [jointPositions,T0e]=calculateFK(qconfig);
-                        x=jointPositions(joint,:);
-                        plot3(x(1),x(2),x(3),'-o','Color','b','MarkerSize',10,'MarkerFaceColor','#D9FFFF');
-                   end 
-                end
+plotJointPos([0,0,0,0,0,0], [0.5,0,0],2)
+for i=1:random
+  qconfig=randpoint(dims);
+  J=CreateJac(qconfig,joint);
+  J=round(J);
+ 
+    if(rank(J)<5)
+         closelow=qconfig-close;
+         closeup=qconfig+close;
+         closedim=[closelow;closeup]';
+        for j=1:closerandom
+            qconfig=randpoint(closedim);
+            J=CreateJac(qconfig,joint);
+            J=round(J);
+            if(rank(J)<5)
+                %plotJointPos(qconfig, [0.5,0,0],2)
+                [jointPositions,T0e]=calculateFK(qconfig);
+                x=jointPositions(joint,:);
+                plot3(x(1),x(2),x(3),'-o','Color','b','MarkerSize',10,'MarkerFaceColor','#D9FFFF');
             end
         end
     end
@@ -44,4 +53,6 @@ end
 xlabel('X');
 ylabel('Y');
 zlabel('Z');
+axis equal;
+axis([-260 260 -260 260 -400 400]);
 hold off;
