@@ -23,12 +23,11 @@ joint=6;
 lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
 upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5]; % Upper joint limits in radians (grip in mm)
 dims = [lowerLim;upperLim]';
-random=100000;
+random=10000000;
 close=0.10;
-closerandom=20;
+closerandom=10;
 hold on;
-plotJointPos([0,0,0,0,0,0], [0.5,0,0],2)\
-%walk through config space stochastically
+plotJointPos([0,0,0,0,0,0], [0.5,0,0],2)
 for i=1:random
   qconfig=randpoint(dims);
   J=CreateJac(qconfig,joint);
@@ -40,8 +39,6 @@ for i=1:random
          closelow=qconfig-close;
          closeup=qconfig+close;
          closedim=[closelow;closeup]';
-         %if a singularity is found sample random points near that singular
-         %config
         for j=1:closerandom
             qconfig=randpoint(closedim);
             J=CreateJac(qconfig,joint);
@@ -61,5 +58,5 @@ xlabel('X');
 ylabel('Y');
 zlabel('Z');
 axis equal;
-axis([-260 260 -260 260 -400 500]);
+axis([-260 260 -260 260 -400 400]);
 hold off;
