@@ -42,7 +42,7 @@ for i=1:row
     q=Q(i,:);
     q(end)=[];
     [pv,pq]=fkeval(dq,q,1/step);
-    trajPlot(pv,false,'.b');
+    %trajPlot(pv,false,'.b');
     trajPlot(pq,false,'-.r*');
 end
 title('Constant Velocity Trajectory of End Effector')

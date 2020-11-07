@@ -20,19 +20,21 @@ z = [];
 % Compute the end effector Cartesian coordinate for each permutation of 
 % joint variable
 joint=6;
-lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
-upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
+lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
+upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5]; % Upper joint limits in radians (grip in mm)
 dims = [lowerLim;upperLim]';
-random=100000;
-close=0.05;
-closerandom=20;
+random=10000000;
+close=0.10;
+closerandom=10;
 hold on;
 plotJointPos([0,0,0,0,0,0], [0.5,0,0],2)
 for i=1:random
   qconfig=randpoint(dims);
   J=CreateJac(qconfig,joint);
-  J=round(J);
- 
+   J1=round(J(1:3,:));
+   J2=round(J(4:6,:),1);
+   J=[J1;J2];
+    
     if(rank(J)<5)
          closelow=qconfig-close;
          closeup=qconfig+close;
@@ -40,7 +42,9 @@ for i=1:random
         for j=1:closerandom
             qconfig=randpoint(closedim);
             J=CreateJac(qconfig,joint);
-            J=round(J);
+            J1=round(J(1:3,:));
+            J2=round(J(4:6,:),1);
+            J=[J1;J2];
             if(rank(J)<5)
                 %plotJointPos(qconfig, [0.5,0,0],2)
                 [jointPositions,T0e]=calculateFK(qconfig);

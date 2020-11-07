@@ -9,8 +9,10 @@ function [v] = FKvelocity(qdot,qconfig,joint)
     J=CreateJac(qconfig,joint);
     
     % Remove the last entry in qdot
-    qdot(6)=[];
-
+    if(length(qdot)==6)
+        qdot(6)=[];
+    end
+    
     % Transpose the qdot vec if it is wrong transpose
     [row,col]=size(qdot);
     if(col==1)

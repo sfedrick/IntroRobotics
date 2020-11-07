@@ -4,7 +4,7 @@
 % comment this
 
 % initialize time linespace discretization
-t = linspace(0,2*pi,50);
+t = linspace(0,2*pi,1000);
 dt = t(2) - t(1);
 
 % initialize radius
@@ -12,8 +12,8 @@ r = 50;
 
 % initialize velocity values at each time step for circle
 
-v = [1,1,1,0,0,0];
-v=v*30;
+v = [1,0,0,0,0,0];
+v=v*10;
 
 v(1) = NaN;
 v(4:6) = NaN;
@@ -22,13 +22,9 @@ hold on
 
 jointDesired = 6;
 
-q = [0,0,0,0,0]';
+q = [0,0,-pi/2,0,0,0]';
 [jointPos,T] = calculateFK(q);
-for joint=1:5
-    linkPoint1 = jointPos(joint,:);
-    linkPoint2 = jointPos(joint+1,:);    
-    linePlot(linkPoint1,linkPoint2,1,[0,0,0],2);
-end
+plotJointPos(q, [0.5,0,0],2)
 for i=1:50
     qd = IKvelocity(v,q,jointDesired);
     for j=1:length(q)
@@ -54,4 +50,5 @@ xlabel('X');
 ylabel('Y');
 zlabel('Z');
 axis equal;
+axis([-260 260 -260 260 0 600]);
 hold off
