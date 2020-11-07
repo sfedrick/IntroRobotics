@@ -1,8 +1,13 @@
+% This function calculates the angular joint velocities given:
+% v - vector of linear joint velocities
+% qconfig - vector of angular joint positions
+% joint - joint of interest in robot arm
+
 function [qDesired] = IKvelocity(v,qconfig,joint)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+
 J=CreateJac(qconfig,joint);
 a=0;
+
 %removes NaN rows from J and V because they do not matter
 for i=1:length(v)
     a=a+1;
@@ -12,19 +17,9 @@ for i=1:length(v)
         a=a-1;
     end
 end
-%{
-SquareJ=J'*J;
-Jplus=SquareJ\J';
 
-[row,col]=size(v);
-if(col==1)
-    qDesired=Jplus*v;
-else
-    qDesired=Jplus*v';
-end
-%}
-
-
+% Calc qDesired. If v is transposed for some reason, then we want to flip
+% it
 [row,col]=size(v);
 if(col==1)
     qDesired=J\v;
@@ -33,6 +28,8 @@ else
     qDesired=J\v;
 end
 
+% Check the rank. If the rank is decreased, then this means that Jacobian
+% has lose rank and is therefore an infeasible configuration
 Rj=rank(J);
 Rv=rank([J,v]);
 if(Rj==Rv)

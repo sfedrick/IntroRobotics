@@ -1,7 +1,6 @@
 % This function plots a straight line defined by a series of velocity
 % vectors.
-% Most of the function is pretty much the same as circlePlot so did not
-% comment this
+% Most of the function is prett
 
 % initialize time linespace discretization
 t = linspace(0,2*pi,50);

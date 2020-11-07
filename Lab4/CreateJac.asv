@@ -15,30 +15,19 @@ J=[];
 % Only continue if 
 if(pointinterest>0)
     
-    % Gets the real space position of the point of interest
     Oe=jointPositions(pointinterest,:);
-    
-    % Create the Jacobian
     for i=1:pointinterest-1
       zi_1= zaxis(:,i);
-      
-      % Create the skew symmetric matrix
       Si=createS(zi_1);
       Oi=Oe-jointPositions(i,:);
-      
-      % linear velocity
       Jvi=Si*Oi';
-      
-      % angular velocity
       Jwi=zi_1;
-      
-      % combine into Ji and append to main J
       Ji=[Jvi;Jwi];
       J=[J,Ji];
   
     end
     
-   % Special case if pointinterest =1 
+    % 
    if(pointinterest==1)
        Jvi=[0,0,0]';
        Jwi=[0,0,0]';

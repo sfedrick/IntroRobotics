@@ -1,6 +1,6 @@
 % Calculates the linear velocity vector for a given:
-% qdot - vector of angular joint velocities
-% qconfig - vector of angular joint positions
+% qdot - 
+% qconfig
 % joint - joint in the robot that we want to calculate Jacobian for
 
 function [v] = FKvelocity(qdot,qconfig,joint)
@@ -11,7 +11,7 @@ function [v] = FKvelocity(qdot,qconfig,joint)
     % Remove the last entry in qdot
     qdot(6)=[];
 
-    % Transpose the qdot vec if it is wrong transpose
+    % Transpose the qdot matrix if it is wrong transpose
     [row,col]=size(qdot);
     if(col==1)
         v=J*(qdot);

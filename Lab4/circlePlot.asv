@@ -52,15 +52,17 @@ for i=1:length(v)
     fakeQ = [q; 0];
     [jointPos,T] = calculateFK(fakeQ);
    
-    % Use FKV to get the corresponding linear velocities up until jointDesired
+    % Use FKV to get the corresponding linear velocities at jointDesired
     [pv,pq] = fkeval(qd,q,dt);
-    
-    % Plot the orientation vector as well as the actual point
     trajPlot(T,true,'.k');
     trajPlot(pv,false,'.k');
     if(mod(i,10)==0)
         display(T)
     end
+%     plot3(jointPos(3,1),jointPos(3,2),jointPos(3,3),'.b');
+%     plot3(jointPos(4,1),jointPos(4,2),jointPos(4,3),'.r');
+%     plot3(jointPos(5,1),jointPos(5,2),jointPos(5,3),'.b');
+%     plot3(jointPos(6,1),jointPos(6,2),jointPos(6,3),'.k');
 
 end
 

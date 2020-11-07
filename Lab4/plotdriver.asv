@@ -4,8 +4,7 @@
 % robot. We want it to do a complete rotation about every joint, so we go
 % from (0,2*pi)
 initial=[0,0,0,0,0,0];
-%final=[6.5,6.5,6.5,6.5,6.5,6.5];
-final=[3*pi,3*pi,3*pi,3*pi,3*pi,3*pi];
+final=[6.5,6.5,6.5,6.5,6.5,6.5];
 
 % Linearly interpolate between the initial and final configurations in
 % config space with 1000 steps. 
@@ -28,15 +27,15 @@ end
 % entries of Q. Remember that we had already discretized this by 1000 steps
 dq=Q(2,:)-Q(1,:);
 
-% Remove last entry of dq
+% Initialize 
 dq(end)=[];
 
 % Next, we want to plot the end effector's position at each time step. At
 % each given configuration q, we use FK velocity to compute the Jacobian
 % for our constant velocity dq. This will give us the position pv of the end
-% effector at each config q (plotted in blue .). We also wanted to check that this value was
-% correct, so we also used FK position pq to calculate the end effector pos at
-% each configuration q (plotted in red *). 
+% effector at each config q. We also wanted to check that this value was
+% correct, so we also used FK position to calculate the end effector pos at
+% each configuration q
 [row,col]=size(Q);
 for i=1:row
     q=Q(i,:);
@@ -51,3 +50,5 @@ ylabel('Y axis (cm)')
 zlabel('Z axis (cm)')
 axis equal
 hold off
+
+
