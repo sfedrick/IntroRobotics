@@ -1,0 +1,13 @@
+function [PointVector] = VectorFieldPlot(pos,goal,obstacle,params)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+AttStrength=params(1);
+RepStrength=params(2);
+Po=params(3);
+dimension=length(pos);
+%test vector field 
+PointVector=testField(pos);
+%real vector field
+Field(pos);
+end
+
