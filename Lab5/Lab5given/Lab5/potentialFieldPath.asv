@@ -13,12 +13,10 @@ function [path] = potentialFieldPath(map, qStart, qGoal)
 
 M=loadmap(map);
 obstacles=M.obstacles;
-path=qStart;
+path=qstart;
 isDone=false;
 i=1;
-    while (~isDone)
-        [qNext, isDone]=potentialFieldStep(path(i,:), obstacles, qGoal);
-        path=[path;qNext];
-        i=i+1;
-    end
+while (~isDone)
+    potentialFieldStep(path(i), map, qGoal)
+end
 end
