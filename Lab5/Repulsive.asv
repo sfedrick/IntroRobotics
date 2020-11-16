@@ -1,12 +1,16 @@
 function [ForceVector] = Repulsive(pos,obstacle,RepStrength,poScale)
 % calculates repulsive force 
 
+if (length(pos) > 2)
+    obs
+end
+
 % translate rect obstacle into spherical
 [pr, obstOrigin] = circleObstacle(obstacle);
 
 po = poScale*pr;
 
-lowerlim = 0.1;
+lowerlim = 0.01;
 if (po < lowerlim)
     po = lowerlim;
 end

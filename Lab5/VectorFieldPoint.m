@@ -7,21 +7,25 @@ function [PointVector] = VectorFieldPoint(pos,goal,obstacles,params)
 %params are the parameters defined below 
 AttStrength=params(1);
 RepStrength=params(2);
-Po=params(3);
-dimension=length(pos);
-%real field
-% [numObs,trash]=size(obstacles);
-% Repulse=[0,0,0]
-% for i=1:numObs
-%     obstacle=obstacles(i,:);
-%     Ri=Repulsive(pos,obstacle,RepStrength,Po);
-%     Repulse= Repulse+Ri;
-% end 
-% Attract=Attractive(pos,goal,AttStrength);
-% PointVector=Repulse + Attract;
+poScale = params(3);
+radius = params(4);
 
-%test vector field 
-PointVector=Repulsive(pos,obstacle,RepStrength,Po);
+if (length(pos) <= 2)
+    pos(3) = 0;
+    goal(3) = 0;
+end
+
+%real field
+[numObs,trash]=size(obstacles);
+Repulse=[0,0,0];
+for i=1:numObs
+    obstacle=obstacles(i,:);
+    Ri=Repulsive(pos,obstacle,RepStrength,poScale);
+    Repulse= Repulse+Ri;
+end 
+Attract=Attractive(pos,goal,AttStrength,radius);
+PointVector=Repulse + Attract;
+
 
 end
 

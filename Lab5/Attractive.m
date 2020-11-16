@@ -1,6 +1,14 @@
-function [ForceVector] = Attractive(pos,goal,AttStrength)
+function [ForceVector] = Attractive(pos,goal,AttStrength,radius)
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
-ForceVector=-AttStrength*(pos-goal);
+
+dist = norm(pos-goal);
+if (dist >= radius)
+    ForceVector = -AttStrength*(pos-goal)/dist;
+else
+    ForceVector=-AttStrength*(pos-goal);
+end
+
+
 end
 
