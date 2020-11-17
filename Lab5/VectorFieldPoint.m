@@ -8,7 +8,7 @@ function [PointVector] = VectorFieldPoint(pos,goal,obstacles,params)
 AttStrength=params(1);
 RepStrength=params(2);
 poScale = params(3);
-radius = params(4);
+attrRadius = params(4);
 
 if (length(pos) <= 2)
     pos(3) = 0;
@@ -23,7 +23,7 @@ for i=1:numObs
     Ri=Repulsive(pos,obstacle,RepStrength,poScale);
     Repulse= Repulse+Ri;
 end 
-Attract=Attractive(pos,goal,AttStrength,radius);
+Attract=Attractive(pos,goal,AttStrength,attrRadius);
 PointVector=Repulse + Attract;
 
 

@@ -11,12 +11,12 @@ if (po < lowerlim)
     po = lowerlim;
 end
 
-pi = norm(pos - obstOrigin);
+Pi = norm(pos - obstOrigin);
 
-if (po > pi)
+if (po > Pi)
     dp = pos-obstOrigin;
     dp = dp/norm(dp); % normalize
-    ForceVector = RepStrength*((1/pi)-(1/po))*(1/(pi^2))*dp;
+    ForceVector = RepStrength*((1/Pi)-(1/po))*(1/(Pi^2))*dp;
 else
     ForceVector = [0, 0, 0];
 end
