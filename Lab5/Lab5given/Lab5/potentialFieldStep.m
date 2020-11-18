@@ -1,4 +1,4 @@
-function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal)
+function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal,tolerance,dt,params)
 % function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal)
 % This function exectures one step of the potential field planner.
 %
@@ -11,10 +11,9 @@ function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal)
 %   qNext - 1x6 vector of the robots next configuration
 %   isDone - a boolean that is true when the robot has reached the goal or
 %            is stuck. false otherwise
-tolerance=0.01;
+
 isDone=false;
-dt=0.01;
-params=[5,1,1,3];
+
 [currentpos,currentposO]=calculateFK(qCurr);
 [goalpos,goalposO]=calculateFK(qGoal);
 dq=[0,0,0,0,0,0];

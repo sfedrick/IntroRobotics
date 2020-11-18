@@ -17,8 +17,12 @@ obstacles=M.obstacles;
 path=qStart;
 isDone=false;
 i=1;
+dt=0.01;
+params=[5,1,1,3];
+tolerance=0.01;
+
     while (~isDone)
-        [qNext, isDone]=potentialFieldStep(path(i,:), obstacles, qGoal);
+        [qNext, isDone]=potentialFieldStep(path(i,:), obstacles, qGoal,tolerance,dt,params);
         path=[path;qNext];
         i=i+1;
     end
