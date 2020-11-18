@@ -48,7 +48,7 @@ disp('Vector:');
 disp(Repulse);
 PointVector = PointVector*scale;
 Attract = Attract*scale;
-Repulse = Repulse*scale/norm(Repulse);
+Repulse = Repulse*scale;
 
 figure(2);
 hold on
