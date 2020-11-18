@@ -10,7 +10,8 @@ function [path] = potentialFieldPath(map, qStart, qGoal)
 %
 % OUTPUTS:
 %   path - Nx6 vector of the path from start to goal
-
+lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
+upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
 M=loadmap(map);
 obstacles=M.obstacles;
 path=qStart;

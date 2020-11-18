@@ -11,7 +11,7 @@ function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal)
 %   qNext - 1x6 vector of the robots next configuration
 %   isDone - a boolean that is true when the robot has reached the goal or
 %            is stuck. false otherwise
-tolerance=0.001;
+tolerance=0.01;
 isDone=false;
 dt=0.01;
 params=[5,1,1,3];
@@ -31,6 +31,6 @@ end
 if(norm(qCurr-qGoal)<=tolerance)
     isDone=true;
 end
-
+dq=dq/norm(dq);
 qNext=qCurr+dt*dq;
 end

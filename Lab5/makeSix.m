@@ -5,4 +5,8 @@ L=length(Vec);
         L=L+1;
     end
  sixVec=Vec;
+ [row,col]=size(sixVec);
+ if(row~=1)
+     sixVec=sixVec';
+ end
 end 
