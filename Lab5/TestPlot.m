@@ -3,7 +3,10 @@ function [] = TestPlot(nodeOld, nodeNew, hasLine, color, width)
 
 hold on;
 plot3(nodeNew(1),nodeNew(2),nodeNew(3),'.k','MarkerSize',30); 
-if (hasLine == true)    
+if (hasLine == true)
+    line = nodeOld-nodeNew;
+    step = line/1000;
+    
     v1=nodeOld;
     v2=nodeNew;
     v=[v2;v1];

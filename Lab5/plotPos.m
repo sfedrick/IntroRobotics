@@ -7,7 +7,8 @@ function [ForceVector] = plotPos(pos,symbols,colors)
 [row,col]=size(pos);
     for i=1:row
         posi=pos(i,:);
-        plot3(posi(1),posi(2),pos(3),symbols(i),'color',colors(i,:),'markersize',10)
+        plot3(posi(1),posi(2),posi(3),symbols(i),'color',colors(i,:),'markersize',10)
+        %plot3(posi(1),posi(2),posi(3),'.k')
     end 
 
 end

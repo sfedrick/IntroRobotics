@@ -1,4 +1,4 @@
-function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal,tolerance,dt,params)
+function [qNext, isDone,force] = potentialFieldStep(qCurr, map, qGoal,tolerance,dt,params)
 % function [qNext, isDone] = potentialFieldStep(qCurr, map, qGoal)
 % This function exectures one step of the potential field planner.
 %
@@ -17,9 +17,11 @@ isDone=false;
 [currentpos,currentposO]=calculateFK(qCurr);
 [goalpos,goalposO]=calculateFK(qGoal);
 dq=[0,0,0,0,0,0];
+force = [];
 for i=2:6
     df=VectorFieldPoint(currentpos(i,:),goalpos(i,:),map,params);
     df=df';
+    force(i) = norm(df);
     Ji=calcJacobian(qCurr, i);
     Ji=Ji(1:3,:);
     dqi=Ji'*df;
@@ -32,4 +34,5 @@ if(norm(qCurr-qGoal)<=tolerance)
 end
 dq=dq/norm(dq);
 qNext=qCurr+dt*dq;
+
 end

@@ -11,6 +11,7 @@ po = poScale;
 [Pi,unit]=distPointToBox(pos, obstacle);
     if (po > Pi)
         ForceVector = -RepStrength*((1/Pi)-(1/po))*((po/Pi)^2)*unit;
+        %ForceVector = -RepStrength*((1/Pi)-(1/po))*((1/Pi)^2)*unit;
     else
         ForceVector = [0, 0, 0];
     end

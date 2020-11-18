@@ -1,0 +1,18 @@
+function [] = plotPath(map, qStart, qGoal)
+%PLOTPATH 
+
+path = potentialFieldPath(map, qStart, qGoal);
+
+symbols=['o','.','*','
+hold on
+plotJointPos(qStart, [1 0 0],l);
+[row,col] = size(path);
+for i=1:row
+    [jointPositions,T0i] = calculateFK(path(i,:));
+    
+end
+
+hold off
+
+end
+
