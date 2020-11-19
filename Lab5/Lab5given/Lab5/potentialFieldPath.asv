@@ -12,27 +12,71 @@ function [path, forces] = potentialFieldPath(map, qStart, qGoal)
 %   path - Nx6 vector of the path from start to goal
 lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
 upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
+
 M=loadmap(map);
 obstacles=M.obstacles;
+bigRadius = 10;
+thiccObstacles = expandObstacles(bigRadius,obstacles);
+obstacles=thiccObstacles;
 path=qStart;
 isDone=false;
 i=1;
 dt=0.01;
-params=[5,10,150,30];
+params=[100,100,100,30];
 tolerance=0.01;
-
+skip=20;
+localMinAttemps=1;
+listQConfig=zeros(skip,6);
+atlocalmin=false;
+badq=false;
+slowWalking=0;
+IveHadEnough=1000;
 forces = [];
     while (~isDone)
         [qNext, isDone, force]=potentialFieldStep(path(i,:), obstacles, qGoal,tolerance,dt,params);
         forces = [forces;force];
         if (isnan(norm(qNext)))
-            break;
+            display("robot in obstacle try decreasing time step or changing start position")
+            badq=true;
         end
-        path=[path;qNext];
+        if(badq)
+           qNext=path(end,:);
+           badq=false;
+           dt=dt*0.90;
+           params(2)=params(2)+10;
+           i=i-1;
+        else
+            path=[path;qNext];
+        end
+        n=mod(i,skip)+1;
+        listQConfig(n,:)=qNext;
+        if(mod(i,100)==0)
+            atlocalmin=checkForLocalMin(qNext,listQConfig,tolerance);
+        end
         
-        if (length(path) > 5000)
-            break;
+        if(atlocalmin || mod(i,IveHadEnough)==0)
+            %use rrt to get the next qnext
+            localMinAttemps=localMinAttemps+1;
+            minPath=rrt(map, qNext, qGoal);
+            display("number of random rrt steps used");
+            display(localMinAttemps)
+            for m=2:5
+                qNext=minPath(m,:);
+                qNext(6)=0;
+                path=[path;qNext];
+            end
+            atlocalmin=false;
         end
+        if(norm(path(end)-path(end-1))<0.001 && dt<0.1)
+            slowWalking=slowWalking+1;
+            if(slowWalking>IveHadEnough)
+                disp("they were slow walking so I gave them a lil kick")
+                dt=dt*1.01;
+                params(1)=params(1)+1;
+                slowWalking=0;
+            end
+        end
+
         i=i+1;
     end
 end

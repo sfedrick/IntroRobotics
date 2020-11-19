@@ -1,7 +1,18 @@
-function [outputArg1,outputArg2] = checkForLocalMin(qConfig,listQConfig,tol)
-%CHECKFORLOCALMIN Summary of this function goes here
+function [localmin] = checkForLocalMin(qConfig,listQConfig,tol)
+%Qconfig nx6 array containing the past qconfigs of supected local minimum
+%qconfig nx6 current qconfig 
+% 1x1 scalar representing the tolerance
+
 %   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
+localmin=true;
+[row,col]=size(listQConfig);
+for i=1:row
+    dq=listQConfig(i,:)-qConfig;
+    dq=norm(dq);
+    if(dq>tol)
+        localmin=false;
+    end
+end
+
 end
 
