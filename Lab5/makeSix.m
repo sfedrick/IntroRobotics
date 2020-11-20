@@ -1,4 +1,6 @@
 function [sixVec]=makeSix(Vec)
+%turns any nx1 vector to an 6x1 vector this was useful for dealing with the
+%different outputs of the jacobian when you varied the desired joint.
 L=length(Vec);
     while(L<6)
         Vec(L+1)=0;

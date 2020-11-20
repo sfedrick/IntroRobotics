@@ -1,5 +1,5 @@
 function [] = plotJointPos(P, color,l)
-%PLOTJOINTPOS 
+%PLOTJOINTPOS this function plots an joint config
 
 % Plot the robot links in the start configuration
 [jointPositions,T0e]=calculateFK(P);

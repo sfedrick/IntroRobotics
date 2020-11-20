@@ -1,6 +1,6 @@
 clc;
 clear;
-
+%plots the vector field in 2 dimensional space 
 % AttStrength=params(1);
 % RepStrength=params(2);
 % poScale = params(3);

@@ -12,14 +12,18 @@ function [path, forces] = potentialFieldPath(map, qStart, qGoal)
 %   path - Nx6 vector of the path from start to goal
 lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
 upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
-
+%load in map and define parameters
 M=loadmap(map);
 obstacles=M.obstacles;
 bigRadius = 10;
+%obstacle representing self collision with the base 
  cube= [10.001 -0.1 5 12.002 1 10;
          -10.001 -0.1 5 -12.002 1 10;];  
 obstacles=[obstacles;cube];
+%expands the obstacles to take in to account self collision
 obstacles = expandObstacles(bigRadius,obstacles);
+%sets the openness of the end effector to zero and records the final
+%desired value to output at the end of the path
 extension=qGoal(6);
 qStart(6)=0;
 qGoal(6)=0;
@@ -27,6 +31,11 @@ path=qStart;
 isDone=false;
 i=1;
 dt=0.01;
+%defines params 
+% Attrative Strength=params(1);
+% Repulsive Strength=params(2);
+% range of repulsion poScale = params(3);
+% range of quadratic repulsion attrRadius = params(4);
 params=[1,10,50,30];
 tolerance=0.1;
 skip=20;

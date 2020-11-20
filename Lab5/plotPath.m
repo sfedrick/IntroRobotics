@@ -1,5 +1,5 @@
 function [path,forces] = plotPath(map, qStart, qGoal)
-%PLOTPATH 
+%PLOTPATH this takes any map qstart and qgoal and plots their output 
 
 [path,forces] = potentialFieldPath(map, qStart, qGoal);
 

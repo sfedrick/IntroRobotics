@@ -1,6 +1,5 @@
 function [ForceVector] = Attractive(pos,goal,AttStrength,radius)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+%this is a function defining the attractive field 
 
 dist = norm(pos-goal);
 if (dist >= radius)

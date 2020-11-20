@@ -1,6 +1,6 @@
 function [] = plotvectors3d(map,params, goal)
 
-
+%plots the vector field in 3 dimensional space 
 
 qval=[];
 map = loadmap(map);

@@ -1,5 +1,5 @@
 function [ForceVector] = plotPos(pos,symbols,colors)
-%This function is used to plot the positions of each joint in time
+%T
 %   Detailed explanation goes here
 %colors is a n by 3 array of rgb colors
 %symbols is an nx1 array of symbols 

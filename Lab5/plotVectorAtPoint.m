@@ -1,6 +1,6 @@
 
 function [] = plotVectorAtPoint(pos,goal,map,params, scale,window)
-%PLOTVECTORATPOINT 
+%PLOTVECTORATPOINT was used to validate the vector fields 
 
 %Calculates vector field at a point 
 %   Detailed explanation goes here

@@ -1,6 +1,6 @@
 function[] = CheckStartGoal(map,qstart,qgoal)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%This is a plot function that plots the start and goal configs along with
+%obstacles to verify that the intial conditions are valid
 figure;
 O=loadmap(map).obstacles;
 bigRadius = 10;
