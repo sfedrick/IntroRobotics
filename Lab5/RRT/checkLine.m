@@ -15,25 +15,8 @@ OkLine=true;
 smallRadius=5;
 raddicheck=Inf;
 step=100;
-plot=0;
-colors=[1,1,0;
-        1,1,0;
-        1,1,0;
-        1,1,0;
-        1,1,0];
-    
-hold on;
-if(plot)
-        obstacle(obstacles,colors);
-end
-    if(plot)        
-        %plot the two trees 
-        plotJointPos(P,'b',4);
-        plotJointPos(node,'r',4);
-        shg
-    end
-axis equal;
-hold off;
+
+
 while(raddicheck>smallRadius)
     step=step+10;
     line=makeLine(node,P,step);
@@ -71,7 +54,6 @@ for i=1:L
     end
 end
 
-%hard code self collision here 
 
 
 end

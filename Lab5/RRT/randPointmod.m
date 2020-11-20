@@ -19,6 +19,6 @@ for i=1:length(lowerlimcheck)
        P(i)=dims(i,2);
    end
 end
-
+P(6)=0;
 end
 

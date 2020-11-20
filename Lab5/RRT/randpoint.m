@@ -6,5 +6,6 @@ P=[];
     for i=1:row
         P(i)=rand(1)*(abs(dims(i,1)-dims(i,2)))+dims(i,1);
     end
+P(6)=0;
 end
 

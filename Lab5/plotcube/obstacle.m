@@ -6,7 +6,7 @@ function [outputArg1,outputArg2] = obstacle(obstacles,color)
         start=obstacles(i,1:3);
         endy=obstacles(i,4:6);
         length=abs(start-endy);
-        plotcube(length,start,.8,color(i,:));
+        plotcube(length,start,.7,color(i,:));
     end
 
 end

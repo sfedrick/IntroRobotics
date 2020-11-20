@@ -1,14 +1,14 @@
 
-%start = [0.214,-0.009,-0.0750,0.814,0.280,0];
-start=[0.2,0,0,0,0,0];
-goal = [1,0,0,0,0.0,0];
+start = [0.214,-0.009,-0.0750,0.814,0.280,0];
+%start=[0.2,0,0,0,0,0];
+goal = [0,0,0,0,0.0,0];
 
 
 
-map = loadmap('map2.txt');
+map = loadmap('map7.txt');
 cube=map.obstacles;
 tic 
-[path] = rrt('map2.txt', start, goal);
+[path] = rrt('map7.txt', start, goal);
 
 toc
 

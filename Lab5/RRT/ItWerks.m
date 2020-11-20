@@ -13,8 +13,16 @@ colors=[1,1,0;
         1,1,0;
         1,1,0;
         1,1,0];
+broken=false;
+Age=0;
 while(~found)
+   
     counter = length(NodeStart);
+    Age=Age+1;
+     if(Age>10000)
+        broken=true;
+        break;
+    end
     if(plot)
         obstacle(Obstacles,colors);
     end
@@ -37,7 +45,7 @@ while(~found)
    elseif(2*startTree<endTree)
        %sample near end tree
        ForceStartSearch=1;
-   elseif(startTree==endTree)
+   elseif(startTree==endTree || Age>1000)
        ForceStartSearch=0;
        ForceEndSearch=0;
    end
@@ -87,7 +95,9 @@ while(~found)
    end
    
 end
-
+if(broken)
+    Waypoints=nan;
+end
 % walk through start and end trees to combine and get a single tree
 %post porccess turn connect nodes into a list of waypoints
 %post process
