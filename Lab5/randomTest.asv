@@ -52,9 +52,4 @@ for i=1:row
     end
 end
 
-disp('Number of desired maps');
-disp(desiredNum);
-disp('Number of successes');
-disp(count);
-disp('Number of rrt breaks');
-disp(rrtbreak);
+disp(

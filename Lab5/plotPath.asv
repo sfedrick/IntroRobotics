@@ -2,6 +2,7 @@ function [path,forces] = plotPath(map, qStart, qGoal)
 %PLOTPATH this takes any map qstart and qgoal and plots their output 
 
 [path,forces] = potentialFieldPath(map, qStart, qGoal);
+ path(end,6)=nan;
 
 symbols=['o','.','*','+','s','d'];
 colors=[1 1 0;

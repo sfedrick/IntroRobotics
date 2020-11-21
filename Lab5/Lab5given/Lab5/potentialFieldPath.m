@@ -114,7 +114,8 @@ forces = [];
     path(end,6)=extension;
     L=length(path);
     if(brokenrrt)
-        path(L:5500,:)=zeros(5500-L,6);
+        %path(L:5500,:)=zeros(5500-L,6);
+        path(end,6)=nan;
     end
    
 end
