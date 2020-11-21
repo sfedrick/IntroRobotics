@@ -52,6 +52,8 @@ for i=1:row
     end
 end
 
+disp('Randomly generated configurations');
+disp(randomConfigs);
 disp('Number of desired maps');
 disp(desiredNum);
 disp('Number of successes');

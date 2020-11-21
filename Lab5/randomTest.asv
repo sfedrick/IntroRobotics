@@ -52,4 +52,11 @@ for i=1:row
     end
 end
 
+disp('Randomly generated configurations');
 disp(
+disp('Number of desired maps');
+disp(desiredNum);
+disp('Number of successes');
+disp(count);
+disp('Number of rrt breaks');
+disp(rrtbreak);
