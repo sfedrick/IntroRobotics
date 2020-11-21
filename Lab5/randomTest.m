@@ -5,7 +5,7 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30];
 
 randomConfigs = [];
 lengthRand = 0;
-desiredNum = 0;
+desiredNum = 3;
 map = "map1.txt";
 loadedmap = loadmap(map);
 obstacles = loadedmap.obstacles;
@@ -37,13 +37,13 @@ while(lengthRand < desiredNum)
     lengthRand = lengthRand + 1;
 end
 
-newq(end,:) = [1 0 0 0 0 0];
+randomConfigs(end,:) = [1 0 0 0 0 0];
 lengthRand = lengthRand + 1;
 
-count = zeros(lengthRand,1);
-rrtbreak = zeros(lengthRand,1);
+count = zeros(lengthRand-1,1);
+rrtbreak = zeros(lengthRand-1,1);
 
-for i=1:lengthRand
+for i=1:lengthRand-1
     [path, forces] = potentialFieldPath("map1.txt", [0 0 0 0 0 0], randomConfigs(i,:));
     if (length(path) >= 5000 || isnan(path(end,6)))
         if (isnan(path(end,6)))
