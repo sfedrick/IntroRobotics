@@ -26,7 +26,11 @@ thiccObstacles = expandObstacles(bigRadius,Obstacles);
 %path=smallpath;
 
 smallpath=ItWerks(dims,thiccObstacles,start,goal,0,0);
-path=ExpandPath(smallpath,20);
+if(isnan(smallpath))
+    path=nan;
+else
+    path=ExpandPath(smallpath,20);
+end
 
 end
 
