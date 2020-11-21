@@ -27,11 +27,12 @@ while(lengthRand < desiredNum)
    isCollided=detectConfigCollision(map,newq);
     if (~isCollided)
         randomConfigs = [randomConfigs; newq];
-        lengthRand = lengthRand + 1;
     end
-    
+    lengthRand = lengthRand + 1;
 end
 
+randomConfigs(end,:) = [1 0 0 0 0 0];
+lengthRand = lengthRand + 1;
 
 count = zeros(lengthRand-1,1);
 rrtbreak = zeros(lengthRand-1,1);
