@@ -19,7 +19,7 @@ while(~found)
    
     counter = length(NodeStart);
     Age=Age+1;
-     if(Age>10000)
+     if(Age>2000)
         broken=true;
         break;
     end
