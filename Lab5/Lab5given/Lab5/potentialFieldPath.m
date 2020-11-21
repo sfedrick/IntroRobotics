@@ -49,6 +49,7 @@ atlocalmin=false;
 badq=false;
 slowWalking=0;
 IveHadEnough=1000;
+brokenrrt=false;
 forces = [];
     while (~isDone)
         [qNext, isDone, force]=potentialFieldStep(path(i,:), obstacles, qGoal,tolerance,dt,params);
@@ -79,6 +80,8 @@ forces = [];
             minPath=rrt(map, qNext, qGoal);
             if (isnan(minPath))
                 display("rrt broke me");
+                brokenrrt=true;
+                break;
             end
             display("number of random rrt steps used");
             display(localMinAttemps)
@@ -109,6 +112,10 @@ forces = [];
        i=i+1;
     end
     path(end,6)=extension;
+    L=length(path);
+    if(brokenrrt)
+        path(L:5500,:)=zeros(5500-L,6);
+    end
    
 end
   
