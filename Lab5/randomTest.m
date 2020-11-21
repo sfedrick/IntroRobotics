@@ -24,13 +24,7 @@ while(lengthRand < desiredNum)
         xmax=upperLim(j);
         newq(j)=xmin+rand(1)*abs(xmax-xmin);
     end
-    [jointPositions,T0i] = calculateFK(newq);
-    
-    for (k=1:numobst)
-        for (m=1:5)
-            isCollided = detectCollision(jointPositions(m,:),jointPositions(m+1,:),thiccObstacles(k,:));
-        end
-    end
+   isCollided=detectConfigCollision(map,newq);
     if (~isCollided)
         randomConfigs = [randomConfigs; newq];
     end

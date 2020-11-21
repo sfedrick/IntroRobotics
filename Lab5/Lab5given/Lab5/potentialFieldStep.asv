@@ -32,11 +32,8 @@ end
 if(norm(qCurr-qGoal)<=tolerance)
     isDone=true;
 end
-if(norm(dq)~=0)
-    dq=dq/norm(dq);
-else
-    dq=nan;
-end 
+if(norm
+dq=dq/norm(dq);
 qNext=qCurr+dt*dq;
 
 end
