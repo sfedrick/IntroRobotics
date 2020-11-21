@@ -5,8 +5,8 @@ upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30];
 
 randomConfigs = [];
 lengthRand = 0;
-desiredNum = 10;
-map = "map1.txt";
+desiredNum =30;
+map = "map7.txt";
 loadedmap = loadmap(map);
 obstacles = loadedmap.obstacles;
  cube= [10.001 -0.1 5 12.002 1 10;
@@ -17,7 +17,7 @@ bigRadius = 10;
 thiccObstacles = expandObstacles(bigRadius,obstacles);
 [numobst,trash] = size(thiccObstacles);
 
-while(lengthRand < desiredNum)
+while(lengthRand <= desiredNum)
     newq=[0 0 0 0 0 0];
     for j=1:6
         xmin=lowerLim(j);
@@ -55,3 +55,5 @@ disp('Number of successes');
 disp(count);
 disp('Number of rrt breaks');
 disp(rrtbreak);
+disp('Success rate');
+disp(sum(count)/desiredNum);
