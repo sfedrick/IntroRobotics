@@ -13,7 +13,11 @@ function [path, forces] = potentialFieldPath(map, qStart, qGoal)
 lowerLim = [-1.4, -1.2, -1.8, -1.9, -2.0, -15]; % Lower joint limits in radians (grip in mm (negative closes more firmly))
 upperLim = [ 1.4,  1.4,  1.7,  1.7,  1.5,  30]; % Upper joint limits in radians (grip in mm)
 %load in map and define parameters
-M=loadmap(map);
+if(min(class(map)=='string'))
+    M=loadmap(map);
+else
+    M=map;
+end
 obstacles=M.obstacles;
 bigRadius = 10;
 %obstacle representing self collision with the base 
