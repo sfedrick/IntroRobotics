@@ -49,7 +49,8 @@ zlabel('Z');
 plotJointPos(qStart, [1 0 0],4);
 plotJointPos(qGoal, [0 1 0],4);
 hold off
-disp('test123');
+disp('test1234');
+disp('tester');
 
 figure(2)
 plot(1:length(forces),forces(:,5),'.k')
